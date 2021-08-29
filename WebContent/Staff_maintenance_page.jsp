@@ -8,7 +8,7 @@
 	response.setDateHeader ("Expires", 0);
 	
 	if(session.getAttribute("session_idnum") == null) {
-		response.sendRedirect("Staff_login.jsp");
+		response.sendRedirect("index.jsp");
 	}
 %>
 <!DOCTYPE html>
