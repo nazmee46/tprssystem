@@ -37,7 +37,7 @@ public class Login_Servlet extends HttpServlet {
 		}
 		else {
 			session.setAttribute("session_status", staff_login.isValid_login());
-			response.sendRedirect("Staff_login.jsp");
+			response.sendRedirect("index.jsp");
 		}
 	}
 }

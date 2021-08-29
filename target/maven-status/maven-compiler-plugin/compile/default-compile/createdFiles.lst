@@ -28,7 +28,6 @@ Model\Equipment_Type.class
 Servlet\Login_Servlet.class
 Servlet\Add_Staff_Servlet.class
 Servlet\Add_Location_Servlet.class
-controller\Display_MVN_Servlet.class
 Model\Supplier.class
 DAO\Equipment_Type_DAO.class
 DAO\Department_DAO.class

@@ -21,7 +21,7 @@ public class Logout_Servlet extends HttpServlet {
 			session.setAttribute("session_level", null);
 			session.setAttribute("session_status", null);
 			session.invalidate();
-			response.sendRedirect("Staff_login.jsp");
+			response.sendRedirect("index.jsp");
 		}
 		catch(Throwable e) {
 			e.printStackTrace();
