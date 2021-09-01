@@ -26,73 +26,76 @@
     </script>
 </head>
 
-<body style="background-color: #ffffff; padding: 1rem 4rem;">
-	<div class="border rounded">
-		<table id="example" class="display" style="width: 100%">
-			<thead>
-				<tr>
-					<th>Location</th>
-					<th>Block</th>
-					<th>Display Equipment</th>
-					<th>Adapter</th>
-					<th>Remote</th>
-					<th>Chair Quantity</th>
-					<th>Table Quantity</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${locationlist}" var="loclist">
+<body class="px-5 py-4">
+	<div class="card w-100">
+		<div class="card-header fw-bold">Location List</div>
+		<div class="card-body">
+			<table id="example" class="display" style="width: 100%">
+				<thead>
 					<tr>
-						<td>
-							<c:out value="${loclist.location_idnum}"></c:out>
-							<c:if test="${loclist.location_byod == true}">
-								<span class="mx-1 badge rounded-pill bg-danger">BYOD</span>
-							</c:if>
-						</td>
-						<td>
-							<c:out value="${loclist.location_block}"></c:out><br>
-							<label class="text-black-50"><c:out value="${loclist.location_level}"></c:out></label>
-						</td>
-						<td>
-							<c:forEach items="${equipmentdisplaylist}" var="eqdisplist">
-								<c:if test="${loclist.location_idnum == eqdisplist.location_idnum}">
-									<c:out value="${eqdisplist.equipment_type.eqtype_name}"></c:out>
-									<label class="text-black-50"><c:out value="[ ${eqdisplist.equipment_idnum} ]"></c:out></label><br>
-								</c:if>
-							</c:forEach>
-						</td>
-						<td>
-							<c:forEach items="${equipmentdisplaylist}" var="eqdisplist">
-								<c:if test="${loclist.location_idnum == eqdisplist.location_idnum}">
-									<c:out value="${eqdisplist.equipment_converter}"></c:out><br>
-								</c:if>
-							</c:forEach>
-						</td>
-						<td>
-							<c:forEach items="${equipmentdisplaylist}" var="eqdisplist">
-								<c:if test="${loclist.location_idnum == eqdisplist.location_idnum}">
-									<c:out value="${eqdisplist.equipment_remote}"></c:out><br>
-								</c:if>
-							</c:forEach>
-						</td>
-						<td>
-							<c:forEach items="${equipmentcapacitylist}" var="eqcaplist">
-								<c:if test="${loclist.location_idnum == eqcaplist.location_idnum && eqcaplist.equipment_type.eqtype_name == 'Chair'}">
-									<c:out value="${eqcaplist.equipment_quantity}"></c:out><br>
-								</c:if>
-							</c:forEach>
-						</td>
-						<td>
-							<c:forEach items="${equipmentcapacitylist}" var="eqcaplist">
-								<c:if test="${loclist.location_idnum == eqcaplist.location_idnum && eqcaplist.equipment_type.eqtype_name == 'Table'}">
-									<c:out value="${eqcaplist.equipment_quantity}"></c:out><br>
-								</c:if>
-							</c:forEach>
-						</td>
+						<th>Location</th>
+						<th>Block</th>
+						<th>Display Equipment</th>
+						<th>Adapter</th>
+						<th>Remote</th>
+						<th>Chair Quantity</th>
+						<th>Table Quantity</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach items="${locationlist}" var="loclist">
+						<tr>
+							<td>
+								<c:out value="${loclist.location_idnum}"></c:out>
+								<c:if test="${loclist.location_byod == true}">
+									<span class="mx-1 badge rounded-pill bg-danger">BYOD</span>
+								</c:if>
+							</td>
+							<td>
+								<c:out value="${loclist.location_block}"></c:out><br>
+								<label class="text-black-50"><c:out value="${loclist.location_level}"></c:out></label>
+							</td>
+							<td>
+								<c:forEach items="${equipmentdisplaylist}" var="eqdisplist">
+									<c:if test="${loclist.location_idnum == eqdisplist.location_idnum}">
+										<c:out value="${eqdisplist.equipment_type.eqtype_name}"></c:out>
+										<label class="text-black-50"><c:out value="[ ${eqdisplist.equipment_idnum} ]"></c:out></label><br>
+									</c:if>
+								</c:forEach>
+							</td>
+							<td>
+								<c:forEach items="${equipmentdisplaylist}" var="eqdisplist">
+									<c:if test="${loclist.location_idnum == eqdisplist.location_idnum}">
+										<c:out value="${eqdisplist.equipment_converter}"></c:out><br>
+									</c:if>
+								</c:forEach>
+							</td>
+							<td>
+								<c:forEach items="${equipmentdisplaylist}" var="eqdisplist">
+									<c:if test="${loclist.location_idnum == eqdisplist.location_idnum}">
+										<c:out value="${eqdisplist.equipment_remote}"></c:out><br>
+									</c:if>
+								</c:forEach>
+							</td>
+							<td>
+								<c:forEach items="${equipmentcapacitylist}" var="eqcaplist">
+									<c:if test="${loclist.location_idnum == eqcaplist.location_idnum && eqcaplist.equipment_type.eqtype_name == 'Chair'}">
+										<c:out value="${eqcaplist.equipment_quantity}"></c:out><br>
+									</c:if>
+								</c:forEach>
+							</td>
+							<td>
+								<c:forEach items="${equipmentcapacitylist}" var="eqcaplist">
+									<c:if test="${loclist.location_idnum == eqcaplist.location_idnum && eqcaplist.equipment_type.eqtype_name == 'Table'}">
+										<c:out value="${eqcaplist.equipment_quantity}"></c:out><br>
+									</c:if>
+								</c:forEach>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 

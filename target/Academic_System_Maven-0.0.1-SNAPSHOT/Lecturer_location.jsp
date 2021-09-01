@@ -26,8 +26,8 @@
     </script>
 </head>
 
-<body style="background-color: #ffffff; padding: 1rem 4rem;">
-	<div class="border rounded">
+<body style="padding: 1rem 4rem;">
+	<div class="border rounded bg-white">
 		<table id="example" class="display" style="width: 100%">
 			<thead>
 				<tr>
