@@ -90,9 +90,15 @@ public class Add_Equipment_AC_Servlet extends HttpServlet {
 		if(request.getParameter("supplier_idnum") != "") {
 			equipment_ac_info.setSupplier_idnum(request.getParameter("supplier_idnum"));
 		}
+		else {
+			equipment_ac_info.setSupplier_idnum(null);
+		}
 		
 		if(request.getParameter("location_idnum") != "") {
 			equipment_ac_info.setLocation_idnum(request.getParameter("location_idnum"));
+		}
+		else {
+			equipment_ac_info.setLocation_idnum(null);
 		}
 
 		if(request.getParameter("equipment_quantity").length() != 0) {
