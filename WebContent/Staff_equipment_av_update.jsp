@@ -165,7 +165,7 @@
 								</div>
 								<div class="col-6">
 									<label class="form-label">Location</label>
-									<select name="location_idnum" class="form-select">
+									<select name="location_idnum" class="form-select" required>
 										<option value=""></option>
 										<c:forEach items="${locationlist}" var="loclist">
 											<option <c:if test="${loclist.location_idnum == equipmentavinfo.location_idnum}"><c:out value="selected"></c:out></c:if> value="<c:out value="${loclist.location_idnum}"></c:out>"><c:out value="${loclist.location_idnum}"></c:out></option>
@@ -185,7 +185,7 @@
 								</div>
 								<div class="col-6">
 									<label class="form-label">Supplier</label>
-									<select name="supplier_idnum" class="form-select">
+									<select name="supplier_idnum" class="form-select" required>
 										<option value=""></option>
 										<c:forEach items="${supplierlist}" var="suplist">
 											<option <c:if test="${suplist.supplier_idnum == equipmentavinfo.supplier_idnum}"><c:out value="selected"></c:out></c:if> value="<c:out value="${suplist.supplier_idnum}"></c:out>"><c:out value="${suplist.supplier_name}"></c:out></option>

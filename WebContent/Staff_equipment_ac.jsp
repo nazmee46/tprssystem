@@ -179,7 +179,7 @@
 								</div>
 								<div class="col-6">
 									<label class="form-label">Location</label>
-									<select name="location_idnum" class="form-select">
+									<select name="location_idnum" class="form-select" required>
 										<option value=""></option>
 										<c:forEach items="${locationlist}" var="loclist">
 											<option value="<c:out value="${loclist.location_idnum}"></c:out>"><c:out value="${loclist.location_idnum}"></c:out></option>
@@ -194,7 +194,7 @@
 								</div>
 								<div class="col-6">
 									<label class="form-label">Supplier</label>
-									<select name="supplier_idnum" class="form-select">
+									<select name="supplier_idnum" class="form-select" required>
 										<option value=""></option>
 										<c:forEach items="${supplierlist}" var="suplist">
 											<option value="<c:out value="${suplist.supplier_idnum}"></c:out>"><c:out value="${suplist.supplier_name}"></c:out></option>
