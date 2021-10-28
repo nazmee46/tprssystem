@@ -182,8 +182,8 @@
 							<th>Report <br> Date</th>
 							<th>Maintenance <br> Date</th>
 							<th>Department</th>
-							<th>Staff</th>
 							<th>Location</th>
+							<th>Staff</th>
 							<th>Supplier</th>
 						</tr>
 						<c:forEach items="${equipmentreportlist}" var="eqreplist">
