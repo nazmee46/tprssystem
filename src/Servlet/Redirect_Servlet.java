@@ -54,8 +54,8 @@ public class Redirect_Servlet extends HttpServlet {
 			switch(action) {
 			case "lecturer_location":
 				request.setAttribute("locationlist", locationdao.viewlocationlist());
-				request.setAttribute("equipmentdisplaylist", equipmentdao.viewequipmentdisplay());
-				request.setAttribute("equipmentcapacitylist", equipmentdao.viewequipmentcapacity());
+//				request.setAttribute("equipmentdisplaylist", equipmentdao.viewequipmentdisplay());
+//				request.setAttribute("equipmentcapacitylist", equipmentdao.viewequipmentcapacity());
 				view = request.getRequestDispatcher("Lecturer_location.jsp");
 				view.forward(request, response);
 				break;

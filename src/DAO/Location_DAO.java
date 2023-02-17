@@ -111,36 +111,36 @@ public class Location_DAO {
 		
 		try {
 			connect = Database_Connection.getConnection();
-			ps = connect.prepareStatement("SELECT * FROM location");
-			
-			ResultSet rs = ps.executeQuery();
-			
-			while(rs.next()) {
-				Location location_info = new Location();
-				
-				location_info.setLocation_idnum(rs.getString("location_idnum"));
-				location_info.setLocation_block(rs.getString("location_block"));
-				location_info.setLocation_level(rs.getString("location_level"));
-				location_info.setLocation_maint_date(rs.getDate("location_maint_date"));
-				location_info.setLocation_maint_status(rs.getString("location_maint_status"));
-				location_info.setLocation_byod(rs.getBoolean("location_byod"));
-				
-				if(rs.getDate("location_maint_date") != null) {
-					long millis = System.currentTimeMillis();  
-					java.sql.Date datetoday = new java.sql.Date(millis);
-					
-					LocalDateTime today_date = datetoday.toLocalDate().atStartOfDay();
-					LocalDateTime database_date = rs.getDate("location_maint_date").toLocalDate().atStartOfDay();
-					
-					long daysBetween = Duration.between(database_date, today_date).toDays();
-					location_info.setLocation_date_different(daysBetween + " days ago");
-				}
-				else {
-					location_info.setLocation_date_different(null);
-				}
-				
-				location_list.add(location_info);
-			}
+//			ps = connect.prepareStatement("SELECT * FROM location");
+//			
+//			ResultSet rs = ps.executeQuery();
+//			
+//			while(rs.next()) {
+//				Location location_info = new Location();
+//				
+//				location_info.setLocation_idnum(rs.getString("location_idnum"));
+//				location_info.setLocation_block(rs.getString("location_block"));
+//				location_info.setLocation_level(rs.getString("location_level"));
+//				location_info.setLocation_maint_date(rs.getDate("location_maint_date"));
+//				location_info.setLocation_maint_status(rs.getString("location_maint_status"));
+//				location_info.setLocation_byod(rs.getBoolean("location_byod"));
+//				
+//				if(rs.getDate("location_maint_date") != null) {
+//					long millis = System.currentTimeMillis();  
+//					java.sql.Date datetoday = new java.sql.Date(millis);
+//					
+//					LocalDateTime today_date = datetoday.toLocalDate().atStartOfDay();
+//					LocalDateTime database_date = rs.getDate("location_maint_date").toLocalDate().atStartOfDay();
+//					
+//					long daysBetween = Duration.between(database_date, today_date).toDays();
+//					location_info.setLocation_date_different(daysBetween + " days ago");
+//				}
+//				else {
+//					location_info.setLocation_date_different(null);
+//				}
+//				
+//				location_list.add(location_info);
+//			}
 			connect.close();
 		}
 		catch(Exception e) {
