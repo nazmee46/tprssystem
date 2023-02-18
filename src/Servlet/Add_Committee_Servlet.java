@@ -9,13 +9,13 @@ import Model.Committee;
 
 import DAO.CommitteeDAO;
 
-@WebServlet("/Update_Account_Servlet")
-public class Update_Account_Servlet extends HttpServlet {
+@WebServlet("/Add_Committee_Servlet")
+public class Add_Committee_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CommitteeDAO committeedao;
 	HttpSession session;
 	
-    public Update_Account_Servlet() {
+    public Add_Committee_Servlet() {
         super();
         committeedao = new CommitteeDAO();
     }
@@ -35,10 +35,10 @@ public class Update_Account_Servlet extends HttpServlet {
 			committee_info.setCommAddress(request.getParameter("commAddress"));
 		}
 		if(request.getParameter("presidentID") != "") {
-			committee_info.setPresidentID(request.getParameter("presidentID"));
+			committee_info.setPresidentID(request.getParameter("department_idnum"));
 		}
 		
-		session.setAttribute("session_status", committeedao.updatecommittee(committee_info));
-		response.sendRedirect("Redirect_Servlet?action=account&id=" + request.getParameter("commID"));
+		session.setAttribute("session_status", committeedao.addcommittee(committee_info));
+		response.sendRedirect("Redirect_Servlet?action=committee");
 	}
 }

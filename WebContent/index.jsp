@@ -18,7 +18,7 @@
 
 <body>
 	<main class="form-signin text-center mt-8 bg-accent">
-		<input type="button" class="w-50 p-3 fw-bold bg-accent" value="Staff"><input onclick="window.location.href='Redirect_Servlet?action=lecturer_location'" type="button" class="w-50 p-3 bg-accent-light" value="Class">
+		<input type="button" class="w-50 p-3 fw-bold bg-accent" value="Committee"><input onclick="window.location.href='Redirect_Servlet?action=lecturer_location'" type="button" class="w-50 p-3 bg-accent-light" value="Class">
 		<form action="Login_Servlet" method="post" class="m-4">
 			<h1 class="h3 my-5 fw-normal fw-bold">Sign in</h1>
 			<c:if test="${session_status != null}">

@@ -28,7 +28,7 @@ public class Default_Servlet extends HttpServlet {
 	private Equipment_DAO equipmentdao;
 	private Equipment_Type_DAO equipmenttypedao;
 	private Location_DAO locationdao;
-	private CommitteeDAO staffdao;
+	private CommitteeDAO committeedao;
 	private Supplier_DAO supplierdao;
 	
     public Default_Servlet() {
@@ -37,7 +37,7 @@ public class Default_Servlet extends HttpServlet {
         equipmentdao = new Equipment_DAO();
         equipmenttypedao = new Equipment_Type_DAO();
         locationdao = new Location_DAO();
-        staffdao = new CommitteeDAO();
+        committeedao = new CommitteeDAO();
         supplierdao = new Supplier_DAO();
     }
 
@@ -50,7 +50,7 @@ public class Default_Servlet extends HttpServlet {
 		Equipment_AC equipment_ac_info = new Equipment_AC();
 		Equipment_Type equipment_type_info = new Equipment_Type();
 		Location location_info = new Location();
-		Committee staff_info = new Committee();
+		Committee committee_info = new Committee();
 		Supplier supplier_info = new Supplier();
 	}
 }
