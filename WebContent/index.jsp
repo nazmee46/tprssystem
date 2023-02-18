@@ -29,7 +29,7 @@
 			</c:if>
 			<div class="form-floating">
 				<input type="text" name="commID" class="form-control" placeholder="ID number" required>
-				<label>Committee ID</label>
+				<label>Committee Identity</label>
 			</div>
 			<div class="form-floating">
 				<input type="password" name="commPass" class="form-control" placeholder="Password" required>
