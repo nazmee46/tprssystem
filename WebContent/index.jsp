@@ -28,11 +28,11 @@
 				</div>
 			</c:if>
 			<div class="form-floating">
-				<input type="text" name="commID" class="form-control" placeholder="ID number" required>
-				<label>Committee Identity</label>
+				<input type="text" name="commid" class="form-control" placeholder="ID number" required>
+				<label>Enter your ID</label>
 			</div>
 			<div class="form-floating">
-				<input type="password" name="commPass" class="form-control" placeholder="Password" required>
+				<input type="password" name="commpass" class="form-control" placeholder="Password" required>
 				<label>Password</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary my-5" type="submit">Sign in</button>

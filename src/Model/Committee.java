@@ -1,67 +1,54 @@
 package Model;
 
 public class Committee {
-	private int commID;
-	private String commName;
-	private String commPhoneNo;
-	private String commAddress;
-	private String commPass;
-	private String presidentID;
+	private int commid;
+	private String commname;
+	private String commphoneno;
+	private String commaddress;
+	private String commpass;
+	private String presidentid;
 	private String validLogin;
-
-	public int getCommID() {
-		return commID;
+	public int getCommid() {
+		return commid;
 	}
-
-	public void setCommID(int commID) {
-		this.commID = commID;
+	public void setCommid(int commid) {
+		this.commid = commid;
 	}
-
-	public String getCommName() {
-		return commName;
+	public String getCommname() {
+		return commname;
 	}
-
-	public void setCommName(String commName) {
-		this.commName = commName;
+	public void setCommname(String commname) {
+		this.commname = commname;
 	}
-
-	public String getCommPhoneNo() {
-		return commPhoneNo;
+	public String getCommphoneno() {
+		return commphoneno;
 	}
-
-	public void setCommPhoneNo(String commPhoneNo) {
-		this.commPhoneNo = commPhoneNo;
+	public void setCommphoneno(String commphoneno) {
+		this.commphoneno = commphoneno;
 	}
-
-	public String getCommAddress() {
-		return commAddress;
+	public String getCommaddress() {
+		return commaddress;
 	}
-
-	public void setCommAddress(String commAddress) {
-		this.commAddress = commAddress;
+	public void setCommaddress(String commaddress) {
+		this.commaddress = commaddress;
 	}
-
-	public String getCommPass() {
-		return commPass;
+	public String getCommpass() {
+		return commpass;
 	}
-
-	public void setCommPass(String commPass) {
-		this.commPass = commPass;
+	public void setCommpass(String commpass) {
+		this.commpass = commpass;
 	}
-
-	public String getPresidentID() {
-		return presidentID;
+	public String getPresidentid() {
+		return presidentid;
 	}
-
-	public void setPresidentID(String presidentID) {
-		this.presidentID = presidentID;
+	public void setPresidentid(String presidentid) {
+		this.presidentid = presidentid;
 	}
-
 	public String isValidLogin() {
 		return validLogin;
 	}
-
 	public void setValidLogin(String validLogin) {
 		this.validLogin = validLogin;
 	}
+
 }

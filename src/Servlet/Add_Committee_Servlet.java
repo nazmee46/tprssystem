@@ -24,18 +24,18 @@ public class Add_Committee_Servlet extends HttpServlet {
 		Committee committee_info = new Committee();
 		session = request.getSession(true);
 		
-		committee_info.setCommID(Integer.parseInt(request.getParameter("commID")));
-		committee_info.setCommPass(request.getParameter("commPass"));
-		committee_info.setCommName(request.getParameter("commName"));
+		committee_info.setCommid(Integer.parseInt(request.getParameter("commid")));
+		committee_info.setCommpass(request.getParameter("commpass"));
+		committee_info.setCommname(request.getParameter("commname"));
 		
-		if(request.getParameter("commPhoneNo") != "") {
-			committee_info.setCommPhoneNo(request.getParameter("commPhoneNo"));
+		if(request.getParameter("commphoneno") != "") {
+			committee_info.setCommphoneno(request.getParameter("commphoneno"));
 		}
-		if(request.getParameter("commAddress") != "") {
-			committee_info.setCommAddress(request.getParameter("commAddress"));
+		if(request.getParameter("commaddress") != "") {
+			committee_info.setCommaddress(request.getParameter("commaddress"));
 		}
-		if(request.getParameter("presidentID") != "") {
-			committee_info.setPresidentID(request.getParameter("department_idnum"));
+		if(request.getParameter("presidentid") != "") {
+			committee_info.setPresidentid(request.getParameter("presidentid"));
 		}
 		
 		session.setAttribute("session_status", committeedao.addcommittee(committee_info));

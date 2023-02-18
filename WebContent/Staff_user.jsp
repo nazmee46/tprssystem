@@ -7,7 +7,7 @@
 	response.setHeader("Pragma","no-cache");
 	response.setDateHeader ("Expires", 0);
 	
-	if(session.getAttribute("session_idnum") == null) {
+	if(session.getAttribute("session_commid") == null) {
 		response.sendRedirect("index.jsp");
 	}
 %>

@@ -24,15 +24,15 @@ public class Login_Servlet extends HttpServlet {
 		Committee committee_info = new Committee();
 		session = request.getSession(true);
 		
-		committee_info.setCommID(Integer.parseInt(request.getParameter("commID")));
-		committee_info.setCommPass(request.getParameter("commPass"));
+		committee_info.setCommid(Integer.parseInt(request.getParameter("commid")));
+		committee_info.setCommpass(request.getParameter("commpass"));
 		
 		Committee committee_login = committeedao.logincommittee(committee_info);
 		
 		if(committee_login.isValidLogin() == "Successfully login") {
-			session.setAttribute("session_idnum", committee_login.getCommID());
-			session.setAttribute("session_name", committee_login.getCommName());
-			response.sendRedirect("Redirect_Servlet?action=location");
+			session.setAttribute("session_commid", committee_login.getCommid());
+			session.setAttribute("session_name", committee_login.getCommname());
+			response.sendRedirect("Staff_user.jsp");
 		}
 		else {
 			session.setAttribute("session_status", committee_login.isValidLogin());
