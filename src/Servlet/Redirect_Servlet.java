@@ -10,7 +10,7 @@ import DAO.Department_DAO;
 import DAO.Equipment_DAO;
 import DAO.Equipment_Type_DAO;
 import DAO.Location_DAO;
-import DAO.Staff_DAO;
+import DAO.CommitteeDAO;
 import DAO.Supplier_DAO;
 
 @WebServlet("/Redirect_Servlet")
@@ -20,7 +20,7 @@ public class Redirect_Servlet extends HttpServlet {
 	private Equipment_DAO equipmentdao;
 	private Equipment_Type_DAO equipmenttypedao;
 	private Location_DAO locationdao;
-	private Staff_DAO staffdao;
+	private CommitteeDAO committeedao;
 	private Supplier_DAO supplierdao;
 	HttpSession session;
 	
@@ -30,7 +30,7 @@ public class Redirect_Servlet extends HttpServlet {
         equipmentdao = new Equipment_DAO();
         equipmenttypedao = new Equipment_Type_DAO();
         locationdao = new Location_DAO();
-        staffdao = new Staff_DAO();
+        committeedao = new CommitteeDAO();
         supplierdao = new Supplier_DAO();
     }
 
@@ -39,7 +39,7 @@ public class Redirect_Servlet extends HttpServlet {
 		
 		String location_id = null;
 		String equipmenttype_id = null;
-		String staff_id = null;
+		String commID = null;
 		String equipmentav_idnum = null;
 		String equipmentac_idnum = null;
 		String equipment_department = null;
@@ -94,7 +94,7 @@ public class Redirect_Servlet extends HttpServlet {
 			case "equipmentav_update":
 				equipmentav_idnum = request.getParameter("id");
 				request.setAttribute("equipmentavinfo", equipmentdao.viewequipmentav(equipmentav_idnum));
-				request.setAttribute("stafflist", staffdao.viewstafflist());
+				request.setAttribute("stafflist", committeedao.viewcommitteelist());
 				request.setAttribute("locationlist", locationdao.viewlocationlist());
 				request.setAttribute("equipmenttypelist", equipmenttypedao.viewequipmenttypelist());
 				request.setAttribute("supplierlist", supplierdao.viewsupplierlist());
@@ -125,7 +125,7 @@ public class Redirect_Servlet extends HttpServlet {
 			case "equipmentac_update":
 				equipmentac_idnum = request.getParameter("id");
 				request.setAttribute("equipmentacinfo", equipmentdao.viewequipmentac(equipmentac_idnum));
-				request.setAttribute("stafflist", staffdao.viewstafflist());
+				request.setAttribute("stafflist", committeedao.viewcommitteelist());
 				request.setAttribute("locationlist", locationdao.viewlocationlist());
 				request.setAttribute("equipmenttypelist", equipmenttypedao.viewequipmenttypelist());
 				request.setAttribute("supplierlist", supplierdao.viewsupplierlist());
@@ -222,25 +222,22 @@ public class Redirect_Servlet extends HttpServlet {
 				view.forward(request, response);
 				break;
 				
-			case "staff":
-				request.setAttribute("departmentlist", departmentdao.viewdepartmentlist());
-				request.setAttribute("stafflist", staffdao.viewstafflist());
+			case "committee":
+				request.setAttribute("committeelist", committeedao.viewcommitteelist());
 				view = request.getRequestDispatcher("Staff_user.jsp");
 				view.forward(request, response);
 				break;
 				
-			case "staff_delete":
-				staff_id = request.getParameter("id");
-				session.setAttribute("session_status", staffdao.deletestaff(staff_id));
-				request.setAttribute("departmentlist", departmentdao.viewdepartmentlist());
-				request.setAttribute("stafflist", staffdao.viewstafflist());
+			case "committee_delete":
+				commID = request.getParameter("commID");
+				session.setAttribute("session_status", committeedao.deletecommittee(commID));
+				request.setAttribute("committeelist", committeedao.viewcommitteelist());
 				view = request.getRequestDispatcher("Staff_user.jsp");
 				view.forward(request, response);
 				break;
 				
 			case "account":
-				request.setAttribute("staffinfo", staffdao.viewstaff(java_session_value));
-				request.setAttribute("departmentlist", departmentdao.viewdepartmentlist());
+				request.setAttribute("committeeinfo", committeedao.viewcommittee(java_session_value));
 				view = request.getRequestDispatcher("Staff_account.jsp");
 				view.forward(request, response);
 				break;

@@ -11,14 +11,14 @@ import Model.Equipment_AV;
 import Model.Equipment_AC;
 import Model.Equipment_Type;
 import Model.Location;
-import Model.Staff;
+import Model.Committee;
 import Model.Supplier;
 
 import DAO.Department_DAO;
 import DAO.Equipment_DAO;
 import DAO.Equipment_Type_DAO;
 import DAO.Location_DAO;
-import DAO.Staff_DAO;
+import DAO.CommitteeDAO;
 import DAO.Supplier_DAO;
 
 @WebServlet("/Default_Servlet")
@@ -28,7 +28,7 @@ public class Default_Servlet extends HttpServlet {
 	private Equipment_DAO equipmentdao;
 	private Equipment_Type_DAO equipmenttypedao;
 	private Location_DAO locationdao;
-	private Staff_DAO staffdao;
+	private CommitteeDAO staffdao;
 	private Supplier_DAO supplierdao;
 	
     public Default_Servlet() {
@@ -37,7 +37,7 @@ public class Default_Servlet extends HttpServlet {
         equipmentdao = new Equipment_DAO();
         equipmenttypedao = new Equipment_Type_DAO();
         locationdao = new Location_DAO();
-        staffdao = new Staff_DAO();
+        staffdao = new CommitteeDAO();
         supplierdao = new Supplier_DAO();
     }
 
@@ -50,7 +50,7 @@ public class Default_Servlet extends HttpServlet {
 		Equipment_AC equipment_ac_info = new Equipment_AC();
 		Equipment_Type equipment_type_info = new Equipment_Type();
 		Location location_info = new Location();
-		Staff staff_info = new Staff();
+		Committee staff_info = new Committee();
 		Supplier supplier_info = new Supplier();
 	}
 }

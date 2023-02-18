@@ -5,23 +5,23 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import Model.Staff;
+import Model.Committee;
 
-import DAO.Staff_DAO;
+import DAO.CommitteeDAO;
 
 @WebServlet("/Add_Staff_Servlet")
 public class Add_Staff_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Staff_DAO staffdao;
+	private CommitteeDAO staffdao;
 	HttpSession session;
 	
     public Add_Staff_Servlet() {
         super();
-        staffdao = new Staff_DAO();
+        staffdao = new CommitteeDAO();
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Staff staff_info = new Staff();
+		Committee staff_info = new Committee();
 		session = request.getSession(true);
 		
 		staff_info.setStaff_idnum(request.getParameter("staff_idnum"));

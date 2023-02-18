@@ -41,9 +41,6 @@
 		<div class="staff-name px-4 fs-5 fw-bold">
 			<c:out value="${session_name}"></c:out>
 		</div>
-		<div class="staff-level px-4 fs-6 text-secondary mb-2">
-			<c:out value="${session_level}"></c:out>
-		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
@@ -95,9 +92,9 @@
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=staff" class="nav-link active">
+				<a href="Redirect_Servlet?action=committee" class="nav-link active">
 					<img src="assets/icons/group_white.svg" class="pb-1 px-2">
-					<label class="link-name">Staff</label>
+					<label class="link-name">Committee</label>
 				</a>
 			</li>
 			<li>
