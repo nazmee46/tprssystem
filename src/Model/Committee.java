@@ -1,17 +1,17 @@
 package Model;
 
 public class Committee {
-	private int commid;
+	private String  commid;
 	private String commname;
 	private String commphoneno;
 	private String commaddress;
 	private String commpass;
 	private String presidentid;
 	private String validLogin;
-	public int getCommid() {
+	public String getCommid() {
 		return commid;
 	}
-	public void setCommid(int commid) {
+	public void setCommid(String commid) {
 		this.commid = commid;
 	}
 	public String getCommname() {

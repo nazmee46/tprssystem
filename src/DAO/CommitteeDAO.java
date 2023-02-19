@@ -9,9 +9,10 @@ import Model.Committee;
 public class CommitteeDAO {
 	private static Connection connect = null;
 	private static PreparedStatement ps = null;
-	static int commid;
-	static String commname, commphoneno, commaddress, commpass, presidentid, validLogin;
 	
+	static String commid,commname, commphoneno, commaddress, commpass, presidentid, validLogin;
+	
+	//login committee
 	public static Committee logincommittee(Committee login_committee) {
 		commid = login_committee.getCommid();
 		commpass = login_committee.getCommpass();
@@ -19,19 +20,19 @@ public class CommitteeDAO {
 		try {
 			connect = Database_Connection.getConnection();
 			ps = connect.prepareStatement("SELECT * FROM committee WHERE commid = ?");
-			ps.setInt(1, commid);
+			ps.setString(1, commid);
 			
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()) {
 				ps = connect.prepareStatement("SELECT * FROM committee WHERE commid = ? AND commpass = ?");
-				ps.setInt(1, commid);
+				ps.setString(1, commid);
 				ps.setString(2, commpass);
 				
 				ResultSet sec_rs = ps.executeQuery();
 				
 				if(sec_rs.next()) {
-					login_committee.setCommid(sec_rs.getInt("commid"));
+					login_committee.setCommid(sec_rs.getString("commid"));
 					login_committee.setCommname(sec_rs.getString("commname"));
 					login_committee.setCommphoneno(sec_rs.getString("commphoneno"));
 					login_committee.setValidLogin("Successfully login");
@@ -50,48 +51,40 @@ public class CommitteeDAO {
 		return login_committee;
 	}
 	
-	//add 
-	public String addcommittee(Committee new_committee) {
+	//add committee
+	public String addcommittee(Committee bean) {
 		String status = null;
 		
-		commid = new_committee.getCommid();
-		commname = new_committee.getCommname();
-		commphoneno = new_committee.getCommphoneno();
-		commaddress = new_committee.getCommaddress();
-		commpass = new_committee.getCommpass();
-		presidentid = new_committee.getPresidentid();
+		commid = bean.getCommid();
+		commname = bean.getCommname();
+		commphoneno = bean.getCommphoneno();
+		commaddress = bean.getCommaddress();
+		commpass = bean.getCommpass();
+		presidentid = bean.getPresidentid();
 		
 		try {
 			connect = Database_Connection.getConnection();
-			ps = connect.prepareStatement("SELECT * FROM committee WHERE commid = ?");
-			ps.setInt(1, commid);
 			
-			ResultSet rs = ps.executeQuery();
-			
-			if(rs.next()) {
-				status = "ID number already exist";
-			}
-			else {
-				ps = connect.prepareStatement("INSERT INTO committee (commid, commname, commphoneno, commaddress, commpass, presidentid) VALUES (?, ?, ?, ?, ?, ?)");
-				ps.setInt(1, commid);
+				ps = connect.prepareStatement("INSERT INTO committee(commid,commname,commphoneno,commaddress,commpass,presidentid)VALUES(?,?,?,?,?,?)");
+				ps.setString(1, commid);
 				ps.setString(2, commname);
 				ps.setString(3, commphoneno);
 				ps.setString(4, commaddress);
 				ps.setString(5, commpass);
 				ps.setString(6, presidentid);
 				
-				ps.execute();
+				ps.executeUpdate();
 				status = "Successfully added";
-			}
+			
 			connect.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-			status = "Unsuccessfully added";
 		}
 		return status;
 	}
 	
+	//update committee
 	public String updatecommittee(Committee update_committee) {
 		String status = null;
 		
@@ -110,7 +103,7 @@ public class CommitteeDAO {
 			ps.setString(3, commphoneno);
 			ps.setString(4, commaddress);
 			ps.setString(5, presidentid);
-			ps.setInt(6, commid);
+			ps.setString(6, commid);
 			
 			ps.execute();
 			status = "Successfully updated";
@@ -123,12 +116,14 @@ public class CommitteeDAO {
 		return status;
 	}
 	
-	public String deletecommittee(String delete_commid) {
+	
+	//delete committee
+	public String deletecommittee(String commid) {
 		String status = null;
 		try {
 			connect = Database_Connection.getConnection();
 			ps = connect.prepareStatement("DELETE FROM committee WHERE commid = ?");
-			ps.setString(1, delete_commid);
+			ps.setString(1, commid);
 			
 			ps.execute();
 			status = "Successfully deleted";
@@ -141,58 +136,62 @@ public class CommitteeDAO {
 		return status;
 	}
 	
-	public static List<Committee> viewcommitteelist() {
-		List<Committee> committee_list = new ArrayList<Committee>();
+	//list committee
+	public static List<Committee> getcommitteelist() {
+		List<Committee> committee = new ArrayList<Committee>();
 		
 		try {
 			connect = Database_Connection.getConnection();
-			ps = connect.prepareStatement("SELECT * FROM committee");
+			
+			ps = connect.prepareStatement("SELECT * FROM committee order by commid asc");
 			
 			ResultSet rs = ps.executeQuery();
-			
+				
 			while(rs.next()) {
-				Committee committee_info = new Committee();
+				Committee ci = new Committee();
 				
-				committee_info.setCommid(rs.getInt("commid"));
-				committee_info.setCommname(rs.getString("commname"));
-				committee_info.setCommphoneno(rs.getString("commphoneno"));
-				committee_info.setCommaddress(rs.getString("commaddress"));
-				committee_info.setCommpass(rs.getString("commpass"));
-				committee_info.setPresidentid(rs.getString("presidentid"));
+				ci.setCommid(rs.getString("commid"));
+				ci.setCommname(rs.getString("commname"));
+				ci.setCommphoneno(rs.getString("commphoneno"));
+				ci.setCommaddress(rs.getString("commaddress"));
+				ci.setCommpass(rs.getString("commpass"));
+				ci.setPresidentid(rs.getString("presidentid"));
 				
-				committee_list.add(committee_info);
+				committee.add(ci);
 			}
 			connect.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return committee_list;
+		return committee;
 	}
 	
-	public static Committee viewcommittee(String view_commid) {
-		Committee committee_info = new Committee();
+	//view committee
+	public static Committee viewcommittee(String commid) {
+		Committee committee = new Committee();
 
 		try {
 			connect = Database_Connection.getConnection();
 			ps = connect.prepareStatement("SELECT * FROM committee WHERE commid = ?");
-			ps.setString(1, view_commid);
+			ps.setString(1, commid);
 			
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				committee_info.setCommid(rs.getInt("commid"));
-				committee_info.setCommname(rs.getString("commname"));
-				committee_info.setCommphoneno(rs.getString("commphoneno"));
-				committee_info.setCommaddress(rs.getString("commaddress"));
-				committee_info.setCommpass(rs.getString("commpass"));
-				committee_info.setPresidentid(rs.getString("presidentid"));
+				committee.setCommid(rs.getString("commid"));
+				committee.setCommname(rs.getString("commname"));
+				committee.setCommphoneno(rs.getString("commphoneno"));
+				committee.setCommaddress(rs.getString("commaddress"));
+				committee.setCommpass(rs.getString("commpass"));
+				committee.setPresidentid(rs.getString("presidentid"));
+			
 			}
 			connect.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return committee_info;
+		return committee;
 	}
 }

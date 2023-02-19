@@ -24,7 +24,7 @@ public class Update_Account_Servlet extends HttpServlet {
 		Committee committee_info = new Committee();
 		session = request.getSession(true);
 		
-		committee_info.setCommid(Integer.parseInt(request.getParameter("commid")));
+		committee_info.setCommid (request.getParameter("commid"));
 		committee_info.setCommpass(request.getParameter("commpass"));
 		committee_info.setCommname(request.getParameter("commname"));
 		
