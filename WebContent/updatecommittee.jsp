@@ -73,23 +73,19 @@
 	</div>
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
-	<form action="Committee_Servlet" method="post">
-	  <label for="commid">committee id:</label><br>
-	  <input type="text" id="commid" name="commid" value=""><br>
-	  <label for="commname"> committee name:</label><br>
-	  <input type="text" id="commname" name="commname" value=""><br>
+	<form action="Update_Committee_Servlet" method="post">
 	  <label for="commphoneno"> committee phone:</label><br>
-	  <input type="text" id="commphoneno" name="commphoneno" value=""><br>
+	  <input type="text" id="commphoneno" name="commphoneno" value="<c:out value="${committee.commphoneno}"/>"><br>
 	  <label for="commaddress"> committee address:</label><br>
-	  <input type="text" id="commaddress" name="commaddress" value=""><br>
+	  <input type="text" id="commaddress" name="commaddress" value="<c:out value="${committee.commaddress}"/>"><br>
 	  <label for="commpass"> committee password:</label><br>
-	  <input type="text" id="commpass" name="commpass" value=""><br>
-	  <label for="presidentid"> president id:</label><br>
-	  <input type="text" id="presidentid" name="presidentid" value=""><br>
+	  <input type="text" id="commpass" name="commpass" value="<c:out value="${committee.commpass}"/>"><br>
+	  <label for="commid"></label><br>
+	  <input type="hidden" id="commid" name="commid" value="<c:out value="${committee.commid}"/>"><br>
 	  <br>
 	  <br>
 	  
-	  <input type="submit" value="ADD committee">
+	  <input type="submit" value="update">
 	  
 	  
 	</form>

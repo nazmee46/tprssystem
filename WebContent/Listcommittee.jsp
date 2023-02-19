@@ -89,11 +89,9 @@
 							<tr>
 								<td><c:out value="${ci.commid}"></c:out></td>
 								<td><c:out value="${ci.commname}"></c:out></td>
-								<td>
 									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
-    								<td><a  href="UpdateRoomController?roomID=<c:out value="${ci.commid}"/>" >Update</a></td> 
-   								  <td><a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>
-								</td>
+    								<td><a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}"/>" >Update</a></td> 
+   								  <td><a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

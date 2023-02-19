@@ -85,25 +85,23 @@ public class CommitteeDAO {
 	}
 	
 	//update committee
-	public String updatecommittee(Committee update_committee) {
+	public String updatecommittee(Committee bean) {
 		String status = null;
 		
-		commid = update_committee.getCommid();
-		commname = update_committee.getCommname();
-		commphoneno = update_committee.getCommphoneno();
-		commaddress = update_committee.getCommaddress();
-		commpass = update_committee.getCommpass();
-		presidentid = update_committee.getPresidentid();
+		commid = bean.getCommid();
+		commname = bean.getCommname();
+		commphoneno = bean.getCommphoneno();
+		commaddress = bean.getCommaddress();
+		commpass = bean.getCommpass();
+		presidentid = bean.getPresidentid();
 		
 		try {
 			connect = Database_Connection.getConnection();
-			ps = connect.prepareStatement("UPDATE committee SET commpass = ?, commname = ?, commphoneno = ?, commaddress = ?, presidentid = ? WHERE commid = ?");
-			ps.setString(1, commpass);
-			ps.setString(2, commname);
-			ps.setString(3, commphoneno);
-			ps.setString(4, commaddress);
-			ps.setString(5, presidentid);
-			ps.setString(6, commid);
+			ps = connect.prepareStatement("UPDATE committee SET commphoneno = ?, commaddress = ?, commpass = ? WHERE commid = ?");
+			ps.setString(1, commphoneno);
+			ps.setString(2, commaddress);
+			ps.setString(3, commpass);
+			ps.setString(4, commid);
 			
 			ps.execute();
 			status = "Successfully updated";
