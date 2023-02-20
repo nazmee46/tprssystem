@@ -13,7 +13,7 @@ import DAO.ResidentDAO;
 @WebServlet("/Resident_Servlet_res")
 public class Resident_Servlet_res extends HttpServlet {
 	public String action = "", forward = "";
-	private static String LIST = "Listresident.jsp";
+	private static String LIST = "ListResidentres.jsp";
 	private static String VIEW = "Viewresidentres.jsp";
 	private static final long serialVersionUID = 1L;
 	private ResidentDAO residentdao;
@@ -64,11 +64,9 @@ public class Resident_Servlet_res extends HttpServlet {
 		
 		
 		residentdao.addresident(r);
+		response.sendRedirect("successcreatedaccRes.jsp");
 		
-		request.setAttribute( "committee" , ResidentDAO.getresidentlist());
-		forward=LIST;
-		RequestDispatcher view =request.getRequestDispatcher(forward);
-		view.forward(request, response);
+	
 		
 		
 	

@@ -48,13 +48,13 @@
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			
 			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentac" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=view" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">My profile</label>
 				</a>
@@ -78,20 +78,23 @@
 							<th>Name</th>
 							<th>phone no</th>
 							<th>address</th>
-							<th>password</th>
+							<th>pass</th>
 							
 						</tr>
 					</thead>
 					<tbody>
-						
+							<c:forEach items="${resident}" var="resident">
 							<tr>
-								<td><c:out value="${resident.resid}"></c:out></td>
-								<td><c:out value="${resident.resname}"></c:out></td>
-								<td><c:out value="${resident.resphoneno}"></c:out></td>
-								<td><c:out value="${resident.resaddress}"></c:out></td>	
-								<td><c:out value="${resident.respass}"></c:out></td>
+								<td><c:if test="${session_resid=resident.resid}"> <c:out value="${resident.resid}" />   </c:if></td>
+								<td><c:if test="${session_resid=resident.resid}"> <c:out value="${resident.resname}" />   </c:if></td>
+								<td><c:if test="${session_resid=resident.resid}"> <c:out value="${resident.resphoneno}" />   </c:if></td>
+								<td><c:if test="${session_resid=resident.resid}"> <c:out value="${resident.resaddress}" />   </c:if></td>
+								<td><c:if test="${session_resid=resident.resid}"> <c:out value="${resident.respass}" />   </c:if></td>
+							
+								
 								
 							</tr>
+							</c:forEach>
 						
 					</tbody>
 				</table>

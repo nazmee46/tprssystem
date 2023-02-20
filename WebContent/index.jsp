@@ -19,7 +19,9 @@
 <body>
 	<main class="form-signin text-center mt-8 bg-accent">
 		<a href="logincommittee.jsp">login committee </a>
-		<a href="loginresident.jsp">login resident </a>
+		<a href="loginresident.jsp">login resident </a> <br>
+		<a href="createResident.jsp">create account resident </a>
+		
 	</main>
 </body>
 

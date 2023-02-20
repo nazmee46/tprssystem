@@ -103,12 +103,12 @@ public class ResidentDAO {
 		
 		try {
 			connect = Database_Connection.getConnection();
-			ps = connect.prepareStatement("UPDATE resident SET respass = ?, resname = ?, resphoneno = ?, resaddress = ? WHERE resid = ?");
-			ps.setString(1, respass);
-			ps.setString(2, resname);
-			ps.setString(3, resphoneno);
-			ps.setString(4, resaddress);
-			ps.setString(5, resid);
+			ps = connect.prepareStatement("UPDATE resident SET   resphoneno = ?, resaddress = ?,respass = ? WHERE resid = ?");
+			
+			ps.setString(1, resphoneno);
+			ps.setString(2, resaddress);
+			ps.setString(3, respass);
+			ps.setString(4, resid);
 			
 			ps.execute();
 			status = "Successfully updated";
@@ -172,7 +172,7 @@ public class ResidentDAO {
 	
 	//view resident
 	public static Resident viewresident(String view_resid) {
-		Resident resident_info = new Resident();
+		Resident resident = new Resident();
 
 		try {
 			connect = Database_Connection.getConnection();
@@ -182,17 +182,17 @@ public class ResidentDAO {
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				resident_info.setResid(rs.getString("resid"));
-				resident_info.setResname(rs.getString("resname"));
-				resident_info.setResphoneno(rs.getString("resphoneno"));
-				resident_info.setResaddress(rs.getString("resaddress"));
-				resident_info.setRespass(rs.getString("respass"));
+				resident.setResid(rs.getString("resid"));
+				resident.setResname(rs.getString("resname"));
+				resident.setResphoneno(rs.getString("resphoneno"));
+				resident.setResaddress(rs.getString("resaddress"));
+				resident.setRespass(rs.getString("respass"));
 			}
 			connect.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return resident_info;
+		return resident;
 	}
 }

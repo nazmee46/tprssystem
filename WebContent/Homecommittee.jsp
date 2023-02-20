@@ -61,7 +61,7 @@
 			<li>
 				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name"> List of resident</label>
 				</a>
 			</li>
 			<li>

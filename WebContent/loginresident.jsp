@@ -36,7 +36,7 @@
 				<label>Password</label>
 			</div>
 			<button class="w-100 btn btn-lg btn-primary my-5" type="submit">Sign in</button>
-			<p class=" pb-4 text-muted">&copy; 2017 - 2021</p>
+			<p class=" pb-4 text-muted">&copy; 2022</p>
 		</form>
 	</main>
 </body>

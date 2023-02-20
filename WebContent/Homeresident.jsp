@@ -53,7 +53,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet_res?action=view&&session_resid" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">My Profile</label>
 				</a>
