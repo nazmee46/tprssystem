@@ -53,7 +53,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentav" class="nav-link link-dark">
+				<a href="Report_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>

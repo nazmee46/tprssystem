@@ -117,7 +117,7 @@ public class CommitteeDAO {
 	
 	//delete committee
 	public String deletecommittee(String commid) {
-		String status = null;
+		String status = "1";
 		try {
 			connect = Database_Connection.getConnection();
 			ps = connect.prepareStatement("DELETE FROM committee WHERE commid = ?");

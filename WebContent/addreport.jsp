@@ -47,8 +47,8 @@
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list"   class="nav-link active">
-					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
+				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Committees </label>
 				</a>
 			</li>
@@ -73,35 +73,30 @@
 	</div>
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
-	<div class="card w-100">
-			<div class="card-header fw-bold">Committee List</div>
-			<div class="card-body">
-				<table id="example" class="display" style="width: 100%">
-					<thead>
-						<tr>
-							<th>ID number</th>
-							<th>Name</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${committee}" var="ci">
-							<tr>
-								<td><c:out value="${ci.commid}"></c:out></td>
-								<td><c:out value="${ci.commname}"></c:out></td>
-									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
-									<td><c:if test="${session_commid==ci.commid}">  <a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />" >Update</a>    </c:if></td> 
-    								<td><c:if test="${session_commid==1}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
-   								  
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-				<a  href="addcommittee.jsp" style="height:40px ">Add Committee</a>
-			</div>
-		</div>
-	
+	<form action="Report_Servlet" method="post">
+	  <label for="reportid">report id:</label><br>
+	  <input type="text" id="reportid" name="reportid" value=""><br>
+	  <label for="reportdesc"> report description:</label><br>
+	  <input type="text" id="reportdesc" name="reportdesc" value=""><br>
+	  <label for="reporttype"> report type:</label><br>
+	  <input type="text" id="reporttype" name="reporttype" value=""><br>
+	  <label for="reportstatus"> report status:</label><br>
+	  <input type="text" id="reportstatus" name="reportstatus" value=""><br>
+	  <label for="commid"> committee id:</label><br>
+	  <input type="text" id="commid" name="commid" value=""><br>
+	  <label for="reportdate"> report date (day-month-year):</label><br>
+	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"><br>
+	  
+	  <br>
+	  <br>
+	  
+	  <input type="submit" value="Create Report">
+	  
+	  
+	</form>
 	</div>
+	
+	 
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">

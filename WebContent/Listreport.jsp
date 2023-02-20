@@ -79,25 +79,24 @@
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
-							<th>ID number</th>
-							<th>Name</th>
+							<th>Report ID</th>
+							<th>Report Status</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${committee}" var="ci">
+						<c:forEach items="${report}" var="r">
 							<tr>
-								<td><c:out value="${ci.commid}"></c:out></td>
-								<td><c:out value="${ci.commname}"></c:out></td>
-									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
-									<td><c:if test="${session_commid==ci.commid}">  <a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />" >Update</a>    </c:if></td> 
-    								<td><c:if test="${session_commid==1}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
-   								  
+								<td><c:out value="${r.reportid}"></c:out></td>
+								<td><c:out value="${r.reportstatus}"></c:out></td>
+									<td><a  href="Report_Servlet?action=view&reportid=<c:out value="${r.reportid}" />" >  View  </a></td> 
+									<td><a  href="Update_Report_Servlet?reportid=<c:out value="${r.reportid}" />" >Update</a></td> 
+    								<td><a  href="Report_Servlet?action=delete&reportid=<c:out value="${r.reportid}" />" >Delete</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				<a  href="addcommittee.jsp" style="height:40px ">Add Committee</a>
+				<a  href="addreport.jsp" style="height:40px ">Create Report</a>
 			</div>
 		</div>
 	
