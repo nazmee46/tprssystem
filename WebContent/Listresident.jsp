@@ -47,7 +47,7 @@
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list"   class="nav-link active">
+				<a href="Committee_Servlet?action=list"   class="nav-link link-dark">
 					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Committees </label>
 				</a>
@@ -74,7 +74,7 @@
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
 	<div class="card w-100">
-			<div class="card-header fw-bold">Committee List</div>
+			<div class="card-header fw-bold">Resident List</div>
 			<div class="card-body">
 				<table id="example" class="display" style="width: 100%">
 					<thead>
@@ -85,19 +85,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${committee}" var="ci">
+						<c:forEach items="${resident}" var="r">
 							<tr>
-								<td><c:out value="${ci.commid}"></c:out></td>
-								<td><c:out value="${ci.commname}"></c:out></td>
-									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
-									<td><c:if test="${session_commid==ci.commid}">  <a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />" >Update</a>    </c:if></td> 
-    								<td><c:if test="${session_commid==1}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
+								<td><c:out value="${r.resid}"></c:out></td>
+								<td><c:out value="${r.resname}"></c:out></td>
+									<td><a  href="Resident_Servlet?action=view&resid=<c:out value="${r.resid}" />" >  View  </a></td> 
+									
    								  
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				<a  href="addcommittee.jsp" style="height:40px ">Add Committee</a>
+				
 			</div>
 		</div>
 	

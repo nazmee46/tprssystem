@@ -32,7 +32,7 @@ public class Login_ServletResident extends HttpServlet {
 		if(resident_login.isValidLogin() == "Successfully login") {
 			session.setAttribute("session_resid", resident_login.getResid());
 			session.setAttribute("session_name", resident_login.getResname());
-			response.sendRedirect("Resident_account.jsp");
+			response.sendRedirect("Homeresident.jsp");
 		}
 		else {
 			session.setAttribute("session_status", resident_login.isValidLogin());

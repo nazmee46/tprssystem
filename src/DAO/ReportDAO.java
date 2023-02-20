@@ -10,7 +10,7 @@ public class ReportDAO {
 	private static Connection connect = null;
 	private static PreparedStatement ps = null;
 	
-	static String reportid, reportdesc, reporttype, reportstatus, commid, reportdate;
+	static String reportid, reportdesc, reporttype, reportstatus, commid, reportdate, resid;
 	
 	//add committee
 	public String addreport(Report bean) {
@@ -22,17 +22,20 @@ public class ReportDAO {
 		reportstatus = bean.getReportstatus();
 		commid = bean.getCommid();
 		reportdate = bean.getReportdate();
+		resid = bean.getResid();
 		
 		try {
 			connect = Database_Connection.getConnection();
 			
-				ps = connect.prepareStatement("INSERT INTO reporttest(reportid,reportdesc,reporttype,reportstatus,commid,reportdate)VALUES(?,?,?,?,?,?)");
+				ps = connect.prepareStatement("INSERT INTO reporttest(reportid,reportdesc,reporttype,reportstatus,commid,reportdate,resid)VALUES(?,?,?,?,?,?,?)");
 				ps.setString(1, reportid);
 				ps.setString(2, reportdesc);
 				ps.setString(3, reporttype);
 				ps.setString(4, reportstatus);
 				ps.setString(5, commid);
 				ps.setString(6, reportdate);
+				ps.setString(7, resid);
+				
 				
 				ps.executeUpdate();
 				status = "Successfully added";
@@ -113,6 +116,7 @@ public class ReportDAO {
 				r.setReporttype(rs.getString("reporttype"));
 				r.setReportstatus(rs.getString("reportstatus"));
 				r.setCommid(rs.getString("commid"));
+				r.setResid(rs.getString("resid"));
 				
 				report.add(r);
 			}
@@ -141,7 +145,9 @@ public class ReportDAO {
 				report.setReporttype(rs.getString("reporttype"));
 				report.setReportstatus(rs.getString("reportstatus"));
 				report.setCommid(rs.getString("commid"));
-				report.setReportdate(rs.getString("reportid"));
+				report.setReportdate(rs.getString("reportdate"));
+				report.setResid(rs.getString("resid"));
+				
 			
 			}
 			connect.close();

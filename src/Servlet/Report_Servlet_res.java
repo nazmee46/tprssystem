@@ -10,18 +10,18 @@ import Model.Report;
 
 import DAO.ReportDAO;
 
-@WebServlet("/Report_Servlet")
-public class Report_Servlet extends HttpServlet {
+@WebServlet("/Report_Servlet_res")
+public class Report_Servlet_res extends HttpServlet {
 	public String action = "", forward = "";
-	private static String LIST = "Listreport.jsp";
-	private static String VIEW = "Viewreport.jsp";
+	private static String LIST = "Listreportres.jsp";
+	private static String VIEW = "Viewreportres.jsp";
 	private static final long serialVersionUID = 1L;
 	private ReportDAO reportdao;
-	private String reportid,resid;
+	private String reportid,resid,commid;
 	
 	HttpSession session;
 	
-    public Report_Servlet() {
+    public Report_Servlet_res() {
         super();
         reportdao = new ReportDAO();
     }
@@ -66,7 +66,7 @@ public class Report_Servlet extends HttpServlet {
 		r.setReportdesc(request.getParameter("reportdesc"));
 		r.setReporttype(request.getParameter("reporttype"));
 		r.setReportstatus(request.getParameter("reportstatus"));
-		r.setCommid(request.getParameter("commid"));
+		r.setResid(request.getParameter("resid"));
 		r.setReportdate(request.getParameter("reportdate"));
 		
 		

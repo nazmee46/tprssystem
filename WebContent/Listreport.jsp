@@ -47,19 +47,19 @@
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list"   class="nav-link active">
-					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
+				<a href="Committee_Servlet?action=list"   class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Committees </label>
 				</a>
 			</li>
 			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
-					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
+				<a href="Report_Servlet?action=list" class="nav-link active">
+					<img src="assets/icons/monitor_white.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentac" class="nav-link link-dark">
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
 				</a>
@@ -74,7 +74,7 @@
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
 	<div class="card w-100">
-			<div class="card-header fw-bold">Committee List</div>
+			<div class="card-header fw-bold">Report List</div>
 			<div class="card-body">
 				<table id="example" class="display" style="width: 100%">
 					<thead>

@@ -53,8 +53,8 @@
 				</a>
 			</li>
 			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
-					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
+				<a href="Report_Servlet?action=list" class="nav-link active">
+					<img src="assets/icons/monitor_white.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
@@ -85,6 +85,8 @@
 							<th>Report Status</th>
 							<th>Report Date</th>
 							<th>Committee ID</th>
+							<th>Resident ID</th>
+							
 						</tr>
 					</thead>
 					<tbody>
@@ -96,6 +98,7 @@
 								<td><c:out value="${report.reportstatus}"></c:out></td>	
 								<td><c:out value="${report.reportdate}"></c:out></td>
 								<td><c:out value="${report.commid}"></c:out></td>
+								<td><c:out value="${report.resid}"></c:out></td>
 							</tr>
 						
 					</tbody>

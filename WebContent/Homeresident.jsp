@@ -7,7 +7,7 @@
 	response.setHeader("Pragma","no-cache");
 	response.setDateHeader ("Expires", 0);
 	
-	if(session.getAttribute("session_commid") == null) {
+	if(session.getAttribute("session_resid") == null) {
 		response.sendRedirect("index.jsp");
 	}
 %>
@@ -42,26 +42,20 @@
 			<c:out value="${session_name}"></c:out>
 		</div>
 		<div class="staff-level px-4 fs-6 text-secondary mb-2">
-			<c:out value="${session_commid}"></c:out>
+			<c:out value="${session_resid}"></c:out>
 		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list"   class="nav-link active">
-					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Committees </label>
-				</a>
-			</li>
-			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=view&&session_resid" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name">My Profile</label>
 				</a>
 			</li>
 			<li>
@@ -73,34 +67,6 @@
 	</div>
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
-	<div class="card w-100">
-			<div class="card-header fw-bold">Committee List</div>
-			<div class="card-body">
-				<table id="example" class="display" style="width: 100%">
-					<thead>
-						<tr>
-							<th>ID number</th>
-							<th>Name</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${committee}" var="ci">
-							<tr>
-								<td><c:out value="${ci.commid}"></c:out></td>
-								<td><c:out value="${ci.commname}"></c:out></td>
-									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
-									<td><c:if test="${session_commid==ci.commid}">  <a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />" >Update</a>    </c:if></td> 
-    								<td><c:if test="${session_commid==1}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
-   								  
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-				<a  href="addcommittee.jsp" style="height:40px ">Add Committee</a>
-			</div>
-		</div>
-	
 	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">

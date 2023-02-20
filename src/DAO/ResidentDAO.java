@@ -142,8 +142,8 @@ public class ResidentDAO {
 	}
 	
 	//list resident
-	public static List<Resident> viewresidentlist() {
-		List<Resident> resident_list = new ArrayList<Resident>();
+	public static List<Resident> getresidentlist() {
+		List<Resident> resident = new ArrayList<Resident>();
 		
 		try {
 			connect = Database_Connection.getConnection();
@@ -152,22 +152,22 @@ public class ResidentDAO {
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				Resident resident_info = new Resident();
+				Resident r = new Resident();
 				
-				resident_info.setResid(rs.getString("resid"));
-				resident_info.setResname(rs.getString("resame"));
-				resident_info.setResphoneno(rs.getString("resphoneno"));
-				resident_info.setResaddress(rs.getString("resaddress"));
-				resident_info.setRespass(rs.getString("respass"));
+				 r.setResid(rs.getString("resid"));
+				 r.setResname(rs.getString("resname"));
+				 r.setResphoneno(rs.getString("resphoneno"));
+				 r.setResaddress(rs.getString("resaddress"));
+				 r.setRespass(rs.getString("respass"));
 				
-				resident_list.add(resident_info);
+				resident.add(r);
 			}
 			connect.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return resident_list;
+		return resident;
 	}
 	
 	//view resident

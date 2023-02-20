@@ -54,7 +54,7 @@ if (session.getAttribute("session_commid") == null) {
 						Committees </label>
 			</a></li>
 			<li><a href="Report_Servlet?action=list"
-				class="nav-link link-dark"> <img src="assets/icons/monitor.svg"
+				class="nav-link active"> <img src="assets/icons/monitor_white.svg"
 					class="pb-1 px-2"> <label class="link-name">Report</label>
 			</a></li>
 			<li><a href="Redirect_Servlet?action=equipmentac"
