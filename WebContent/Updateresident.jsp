@@ -72,7 +72,7 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Update_Resident_Servlet" method="post">
 	  <label for="resphoneno"> Resident Phone Number:</label><br>
 	  <input type="text" id="resphoneno" name="resphoneno" value="<c:out value="${resident.resphoneno}"/>"><br>
