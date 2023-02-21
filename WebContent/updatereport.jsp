@@ -57,10 +57,15 @@ if (session.getAttribute("session_commid") == null) {
 				class="nav-link active"> <img src="assets/icons/monitor_white.svg"
 					class="pb-1 px-2"> <label class="link-name">Report</label>
 			</a></li>
-			<li><a href="Redirect_Servlet?action=equipmentac"
+			<li><a href="Residentt_Servlet?action=list"
 				class="nav-link link-dark"> <img src="assets/icons/file.svg"
 					class="pb-1 px-2"> <label class="link-name">Lists of
 						Resident</label>
+			</a></li>
+			<li><a href="Company_Servlet?action=list"
+				class="nav-link link-dark"> <img src="assets/icons/file.svg"
+					class="pb-1 px-2"> <label class="link-name">Lists of
+						Company</label>
 			</a></li>
 			<li><a href="Logout_Servlet" class="nav-link link-dark"
 				data-bs-toggle="modal" data-bs-target="#exampleModal"> <img
@@ -78,12 +83,20 @@ if (session.getAttribute("session_commid") == null) {
 			<label for="reportid"> report ID:</label><br> <input type="text"
 				id="reportid" name="reportid"
 				value="<c:out value="${report.reportid}"/>" disabled><br>
-			<label for="reportstatus"> report status:</label><br> <select
+			<label for="reportstatus"> report status:</label><br>
+			<select
 				name="reportstatus" id="reportstatus"
 				value="<c:out value="${report.reportstatus}" />" class="" required>
 				<option value="">--Status--</option>
 				<option value="in progress">in progress</option>
-				<option value="completed">completed</option>
+				<option value="completed">complete</option>
+			</select><br>
+			<label for="compid"> Assign company:</label><br>
+			<select
+				name="compid" id="compid"
+				value="<c:out value="${report.compid}" />" class="" required>
+				<option value="">--Company ID--</option>
+				<option value="1">1- Elektrika Berhad</option>
 			</select><br>
 				<input type="hidden" id="reportid" name="reportid" value="<c:out value="${report.reportid}"/>">
 			<br> <br> <input type="submit" value="update">

@@ -43,6 +43,7 @@ public class Update_Report_Servlet extends HttpServlet {
 	    r.setReportstatus(request.getParameter("reportstatus"));
 	    r.setCommid(request.getParameter("commid"));
 	    r.setReportdate(request.getParameter("reportdate"));
+	    r.setCompid(request.getParameter("compid"));
 	    
 	    
 	    reportdao.updatereport(r); 

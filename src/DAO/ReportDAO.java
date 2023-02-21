@@ -10,7 +10,7 @@ public class ReportDAO {
 	private static Connection connect = null;
 	private static PreparedStatement ps = null;
 	
-	static String reportid, reportdesc, reporttype, reportstatus, commid, reportdate, resid;
+	static String reportid, reportdesc, reporttype, reportstatus, commid, reportdate, resid, compid;
 	
 	//add committee
 	public String addreport(Report bean) {
@@ -58,13 +58,15 @@ public class ReportDAO {
 		reportstatus = bean.getReportstatus();
 		commid = bean.getCommid();
 		reportdate=bean.getReportdate();
+		compid=bean.getCompid();
 		
 		
 		try {
 			connect = Database_Connection.getConnection();
-			ps = connect.prepareStatement("UPDATE reporttest SET reportstatus = ? WHERE reportid = ?");
+			ps = connect.prepareStatement("UPDATE reporttest SET reportstatus = ?, compid = ? WHERE reportid = ?");
 			ps.setString(1, reportstatus);
-			ps.setString(2, reportid);
+			ps.setString(2, compid);
+			ps.setString(3, reportid);
 			
 			ps.execute();
 			status = "Successfully updated";
@@ -104,7 +106,7 @@ public class ReportDAO {
 		try {
 			connect = Database_Connection.getConnection();
 			
-			ps = connect.prepareStatement("SELECT * FROM reporttest order by reportid asc");
+			ps = connect.prepareStatement("SELECT * FROM reporttest ");
 			
 			ResultSet rs = ps.executeQuery();
 				
@@ -147,6 +149,7 @@ public class ReportDAO {
 				report.setCommid(rs.getString("commid"));
 				report.setReportdate(rs.getString("reportdate"));
 				report.setResid(rs.getString("resid"));
+				report.setCompid(rs.getString("compid"));
 				
 			
 			}

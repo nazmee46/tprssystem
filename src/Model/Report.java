@@ -10,6 +10,7 @@ public class Report {
 	public String commid;
 	public String reportdate;
 	public String resid;
+	public String compid;
 
 	public String getReportid() {
 		return reportid;
@@ -65,5 +66,13 @@ public class Report {
 
 	public void setResid(String resid) {
 		this.resid = resid;
+	}
+
+	public String getCompid() {
+		return compid;
+	}
+
+	public void setCompid(String compid) {
+		this.compid = compid;
 	}
 }

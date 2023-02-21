@@ -59,9 +59,14 @@
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentac" class="nav-link link-dark">
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
+				</a>
+			</li><li>
+				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
 				</a>
 			</li>
 			<li>
@@ -86,7 +91,7 @@
 							<th>Report Date</th>
 							<th>Committee ID</th>
 							<th>Resident ID</th>
-							
+							<th>Company ID</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -99,6 +104,7 @@
 								<td><c:out value="${report.reportdate}"></c:out></td>
 								<td><c:out value="${report.commid}"></c:out></td>
 								<td><c:out value="${report.resid}"></c:out></td>
+								<td><c:out value="${report.compid}"></c:out></td>
 							</tr>
 						
 					</tbody>
