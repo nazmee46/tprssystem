@@ -78,7 +78,7 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Update_Committee_Servlet" method="post">
 	  <label for="commphoneno"> Committee Phone Number:</label><br>
 	  <input type="text" id="commphoneno" name="commphoneno" value="<c:out value="${committee.commphoneno}"/>"><br>

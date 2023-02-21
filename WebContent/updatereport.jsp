@@ -80,10 +80,7 @@ if (session.getAttribute("session_commid") == null) {
 		</ul>
 	</div>
 	<div class="content p-3">
-		<button class="btn btn-sm btn-secondary bg-accent-light"
-			style="border: none;">
-			<img src="assets/icons/short_left.svg" class="py-1">
-		</button>
+		<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 		<form action="Update_Report_Servlet" method="post">
 			<label for="reportid"> report ID:</label><br> <input type="text"
 				id="reportid" name="reportid"
@@ -102,6 +99,8 @@ if (session.getAttribute("session_commid") == null) {
 				value="<c:out value="${report.compid}" />" class="" required>
 				<option value="">--Company ID--</option>
 				<option value="1">1- Elektrika Berhad</option>
+				<option value="2">2 - Security First</option>
+				<option value="3">3 - Civillian William</option>
 			</select><br>
 				<input type="hidden" id="reportid" name="reportid" value="<c:out value="${report.reportid}"/>">
 			<br> <br> <input type="submit" value="update">

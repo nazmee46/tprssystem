@@ -22,28 +22,35 @@
 </head>
 
 <body>
+	<main class="form-signin text-center mt-8 bg-accent">
 	
-	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
-	<form action="Resident_Servlet_res" method="post">
-	  <label for="resid">resident id:</label><br>
-	  <input type="text" id="resid" name="resid" value=""><br>
-	  <label for="resname"> resident name:</label><br>
-	  <input type="text" id="resname" name="resname" value=""><br>
-	  <label for="resphoneno"> resident phone:</label><br>
-	  <input type="text" id="resphoneno" name="resphoneno" value=""><br>
-	  <label for="resaddress"> resident address:</label><br>
-	  <input type="text" id="resaddress" name="resaddress" value=""><br>
-	  <label for="respass"> resident password:</label><br>
-	  <input type="text" id="respass" name="respass" value=""><br>
-	  <br>
-	  <br>
-	  
-	  <input type="submit" value="Create account resident">
-	  
+		<input type="button" class="w-50 p-3 fw-bold bg-accent" value="">
+	<form action="Resident_Servlet_res" method="post" class="m-4">
+	<div class="form-floating">
+				<input type="text" name="resid" id="resid" class="form-control" required>
+				<label>Enter ID</label>
+			</div><br>
+			<div class="form-floating">
+				<input type="text" name="resname" id="resname" class="form-control" required>
+				<label>Enter name</label>
+			</div><br>
+			<div class="form-floating">
+				<input type="text" name="resphoneno" id="resphoneno" class="form-control" required>
+				<label>Enter phone number</label>
+			</div><br>
+			<div class="form-floating">
+				<input type="text" name="resaddress" id="resaddress" class="form-control" required>
+				<label>Enter address</label>
+			</div><br>
+			<div class="form-floating">
+				<input type="password" name="respass" id="respass" class="form-control" required>
+				<label>Enter password</label>
+			</div><br>
+			<button style=background-color:#DC143C class="w-100 btn btn-lg btn-primary my-5" type="submit">Sign Up</button>
+			<p class=" pb-4 text-muted">&copy; 2022 - 2023</p>
 	  
 	</form>
-	</div>
+	</main>
 	
 	 
 	

@@ -55,7 +55,13 @@
 			<li>
 				<a href="Resident_Servlet_res?action=list" class="nav-link active">
 					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name">List of Residents</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet_res?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">List of Company</label>
 				</a>
 			</li>
 			<li>
@@ -66,9 +72,9 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Homeresident.jsp" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<div class="card w-100">
-			<div class="card-header fw-bold">Resident List</div>
+			<div class="card-header fw-bold">Company List</div>
 			<div class="card-body">
 				<table id="example" class="display" style="width: 100%">
 					<thead>
@@ -85,14 +91,11 @@
 								<td><c:out value="${r.resname}"></c:out></td>
 									<td><a  href="Resident_Servlet_res?action=view&resid=<c:out value="${r.resid}" />" >  View  </a></td>
 									<td><c:if test="${session_resid==r.resid}">  <a  href="Update_Resident_Servlet?resid=<c:out value="${r.resid}" />" >Update</a>    </c:if></td> 
-    								<td><c:if test="${session_resid==r.resid}">  <a  href="Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />" >Delete</a>    </c:if></td> 
-									
-   								  
+    								<td><c:if test="${session_resid==r.resid}">  <a  href="Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />" >Delete</a>    </c:if></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				
 			</div>
 		</div>
 	

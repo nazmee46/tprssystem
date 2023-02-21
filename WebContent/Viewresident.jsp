@@ -78,7 +78,7 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<div class="card w-100">
 			<div class="card-header fw-bold">Resident List</div>
 			<div class="card-body">
@@ -87,10 +87,8 @@
 						<tr>
 							<th>ID number</th>
 							<th>Name</th>
-							<th>phone no</th>
-							<th>address</th>
-							<th>password</th>
-							
+							<th>Phone Number</th>
+							<th>Address</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -100,8 +98,6 @@
 								<td><c:out value="${resident.resname}"></c:out></td>
 								<td><c:out value="${resident.resphoneno}"></c:out></td>
 								<td><c:out value="${resident.resaddress}"></c:out></td>	
-								<td><c:out value="${resident.respass}"></c:out></td>
-								
 							</tr>
 						
 					</tbody>

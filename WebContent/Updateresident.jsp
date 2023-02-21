@@ -47,27 +47,21 @@
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list" class="nav-link link-dark">
-					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Committees </label>
-				</a>
-			</li>
-			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link active">
+				<a href="Resident_Servlet_res?action=list" class="nav-link active">
 					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name">List of Residents</label>
 				</a>
 			</li>
 			<li>
-				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+				<a href="Company_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Company</label>
+					<label class="link-name">List of Company</label>
 				</a>
 			</li>
 			<li>
@@ -80,18 +74,18 @@
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
 	<form action="Update_Resident_Servlet" method="post">
-	  <label for="resphoneno"> resident phone:</label><br>
+	  <label for="resphoneno"> Resident Phone Number:</label><br>
 	  <input type="text" id="resphoneno" name="resphoneno" value="<c:out value="${resident.resphoneno}"/>"><br>
-	  <label for="resaddress"> resident address:</label><br>
+	  <label for="resaddress"> Resident Address:</label><br>
 	  <input type="text" id="resaddress" name="resaddress" value="<c:out value="${resident.resaddress}"/>"><br>
-	  <label for="respass"> resident password:</label><br>
+	  <label for="respass"> Resident Password:</label><br>
 	  <input type="text" id="respass" name="respass" value="<c:out value="${resident.respass}"/>"><br>
 	  <label for="resid"></label><br>
 	  <input type="hidden" id="resid" name="resid" value="<c:out value="${resident.resid}"/>"><br>
 	  <br>
 	  <br>
 	  
-	  <input type="submit" value="update">
+	  <input type="submit" value="UPDATE">
 	  
 	  
 	</form>

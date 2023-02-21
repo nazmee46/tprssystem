@@ -13,7 +13,14 @@
 %>
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +43,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color:white;">
 	<div class="sidebar p-3 bg-accent">
 		<div class="staff-name px-4 fs-5 fw-bold">
 			<c:out value="${session_name}"></c:out>
@@ -78,7 +85,20 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	
+	<!-- <button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>-->
+	<div class="card w-100" style="background-color:#d5d9dd;">
+	<section id="hero">
+    <div class="hero container">
+      <div>
+        <h1 style="color:white;">Welcome To <span></span></h1>
+        <h1 style="color:white;">Taman Pahlawan Reporting System <span></span></h1>
+      </div>
+    </div>
+    <img class="center" src="assets/images/rukuntetanga.jpg" alt="Trulli" width="500" height="333" >
+    
+  </section>
+		</div>
 	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">

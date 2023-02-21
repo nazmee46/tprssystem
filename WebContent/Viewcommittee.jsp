@@ -78,7 +78,7 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<div class="card w-100">
 			<div class="card-header fw-bold">Committee List</div>
 			<div class="card-body">
@@ -89,7 +89,6 @@
 							<th>Committee Name</th>
 							<th>Committee Phone Number</th>
 							<th>Committee Address</th>
-							<th>Committee Password</th>
 							<th>President ID</th>
 						</tr>
 					</thead>
@@ -100,7 +99,6 @@
 								<td><c:out value="${committee.commname}"></c:out></td>
 								<td><c:out value="${committee.commphoneno}"></c:out></td>
 								<td><c:out value="${committee.commaddress}"></c:out></td>	
-								<td><c:out value="${committee.commpass}"></c:out></td>
 								<td><c:out value="${committee.presidentid}"></c:out></td>
 							</tr>
 						

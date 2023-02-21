@@ -53,9 +53,15 @@
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentac" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name">List of Residents</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet_res?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">List of Company</label>
 				</a>
 			</li>
 			<li>
@@ -66,19 +72,29 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Report_Servlet_res" method="post">
-	  <label for="reportid">report id:</label><br>
+	  <label for="reportid">Report ID:</label><br>
 	  <input type="text" id="reportid" name="reportid" value=""><br>
-	  <label for="reportdesc"> report description:</label><br>
+	  <label for="reportdesc"> Report Description:</label><br>
 	  <input type="text" id="reportdesc" name="reportdesc" value=""><br>
-	  <label for="reporttype"> report type:</label><br>
-	  <input type="text" id="reporttype" name="reporttype" value=""><br>
-	  <label for="reportstatus"> report status:</label><br>
-	  <input type="text" id="reportstatus" name="reportstatus" value=""><br>
-	  <label for="resid"> resident id:</label><br>
+	  <label for="reporttype"> Report Type:</label><br>
+	  <select
+				name="reporttype" id="reporttype" class="" required>
+				<option value="">--Report Type--</option>
+				<option value="Civil">Civil</option>
+				<option value="Electrical">Electrical</option>
+				<option value="Safety">Safety</option>
+			</select><br>
+	  <label for="reportstatus">Report Status:</label><br>
+<select
+				name="reportstatus" id="reportstatus" class="" required>
+				<option value="">--Report Status--</option>
+				<option value="Report Created">Report Created</option>
+			</select><br>
+	  <label for="resid"> Resident ID:</label><br>
 	  <input type="text" id="resid" name="resid" value=""><br>
-	  <label for="reportdate"> report date (day-month-year):</label><br>
+	  <label for="reportdate"> Report Date (day-month-year):</label><br>
 	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"><br>
 	  
 	  <br>

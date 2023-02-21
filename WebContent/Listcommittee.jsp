@@ -104,7 +104,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<a  href="addcommittee.jsp" style="height:40px ">Add Committee</a>
+				<c:if test="${session_commid==1}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
 			</div>
 		</div>
 	</div>

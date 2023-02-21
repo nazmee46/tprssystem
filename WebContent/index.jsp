@@ -5,24 +5,50 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-	<meta name="generator" content="Hugo 0.84.0">
-	<title>Homepage | Homepage Tprs</title>
-	<link rel="icon" href="assets/images/UiTM_logo.png">
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
-	<link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/home.css">
+  <title>HomePage</title>
 </head>
 
 <body>
-	<main class="form-signin text-center mt-8 bg-accent">
-		<a href="logincommittee.jsp">login committee </a>
-		<a href="loginresident.jsp">login resident </a> <br>
-		<a href="createResident.jsp">create account resident </a>
-		
-	</main>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>TP</span>RS</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="logincommittee.jsp" data-after="Home">Committee Login</a></li>
+            <li><a href="loginresident.jsp" data-after="Service">Resident Login</a></li>
+            <li><a href="createResident.jsp" data-after="Projects">Resident Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Welcome To <span></span></h1>
+        <h1>Taman Pahlawan Reporting System <span></span></h1>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+  <script src="./app.js"></script>
 </body>
 
 </html>

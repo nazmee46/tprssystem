@@ -49,26 +49,33 @@ if (session.getAttribute("session_resid") == null) {
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 
-			<li><a href="Report_Servlet_res?action=list"
-				class="nav-link link-dark"> <img src="assets/icons/monitor.svg"
-					class="pb-1 px-2"> <label class="link-name">Report</label>
-			</a></li>
-			<li><a href="Resident_Servlet_res?action=list"
-				class="nav-link link-dark"> <img src="assets/icons/file.svg"
-					class="pb-1 px-2"> <label class="link-name">List of Residents</label>
-			</a></li>
-			<li><a href="Logout_Servlet" class="nav-link link-dark"
-				data-bs-toggle="modal" data-bs-target="#exampleModal"> <img
-					src="assets/icons/log_out.svg" class="pb-1 px-2"> <label
-					class="link-name">Log out</label>
-			</a></li>
+			<li>
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
+					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
+					<label class="link-name">Report</label>
+				</a>
+			</li>
+			<li>
+				<a href="Resident_Servlet_res?action=list" class="nav-link active">
+					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
+					<label class="link-name">List of Residents</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet_res?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">List of Company</label>
+				</a>
+			</li>
+			<li>
+				<a href="Logout_Servlet" class="nav-link link-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="assets/icons/log_out.svg" class="pb-1 px-2">
+					<label class="link-name">Log out</label>
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div class="content p-3">
-		<button class="btn btn-sm btn-secondary bg-accent-light"
-			style="border: none;">
-			<img src="assets/icons/short_left.svg" class="py-1">
-		</button>
+		<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 		<div class="card w-100">
 			<div class="card-header fw-bold">Resident List</div>
 			<div class="card-body">

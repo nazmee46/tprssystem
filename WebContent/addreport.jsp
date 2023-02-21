@@ -78,19 +78,29 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Report_Servlet" method="post">
-	  <label for="reportid">report id:</label><br>
+	  <label for="reportid">Report ID:</label><br>
 	  <input type="text" id="reportid" name="reportid" value=""><br>
-	  <label for="reportdesc"> report description:</label><br>
+	  <label for="reportdesc">Report Description:</label><br>
 	  <input type="text" id="reportdesc" name="reportdesc" value=""><br>
-	  <label for="reporttype"> report type:</label><br>
-	  <input type="text" id="reporttype" name="reporttype" value=""><br>
-	  <label for="reportstatus"> report status:</label><br>
-	  <input type="text" id="reportstatus" name="reportstatus" value=""><br>
-	  <label for="commid"> committee id:</label><br>
+	  <label for="reporttype">Report Type:</label><br>
+	  <select
+				name="reporttype" id="reporttype" class="" required>
+				<option value="">--Report Type--</option>
+				<option value="Civil">Civil</option>
+				<option value="Electrical">Electrical</option>
+				<option value="Safety">Safety</option>
+			</select><br>
+	  <label for="reportstatus">Report Status:</label><br>
+<select
+				name="reportstatus" id="reportstatus" class="" required>
+				<option value="">--Report Status--</option>
+				<option value="Report Created">Report Created</option>
+			</select><br>
+	  <label for="commid">Committee ID:</label><br>
 	  <input type="text" id="commid" name="commid" value=""><br>
-	  <label for="reportdate"> report date (day-month-year):</label><br>
+	  <label for="reportdate">Report Date (day-month-year):</label><br>
 	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"><br>
 	  
 	  <br>

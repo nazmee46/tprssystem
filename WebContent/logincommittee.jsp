@@ -18,9 +18,9 @@
 
 <body>
 	<main class="form-signin text-center mt-8 bg-accent">
-		<input type="button" class="w-50 p-3 fw-bold bg-accent" value="Committee"> 
+		<input type="button" class="w-50 p-3 fw-bold bg-accent" value=""> 
 		<form action="Login_ServletCommittee" method="post" class="m-4">
-			<h1 class="h3 my-5 fw-normal fw-bold">Sign in</h1>
+			<h1 class="h3 my-5 fw-normal fw-bold">Committee Login</h1>
 			<c:if test="${session_status != null}">
 				<div class="alert alert-danger" role="alert">
 					<c:out value="${session_status}"></c:out>
@@ -35,8 +35,8 @@
 				<input type="password" name="commpass" class="form-control" placeholder="Password" required>
 				<label>Password</label>
 			</div>
-			<button class="w-100 btn btn-lg btn-primary my-5" type="submit">Sign in</button>
-			<p class=" pb-4 text-muted">&copy; 2017 - 2021</p>
+			<button style=background-color:#DC143C class="w-100 btn btn-lg btn-primary my-5" type="submit">Sign in</button>
+			<p class=" pb-4 text-muted">&copy; 2022 - 2023</p>
 		</form>
 	</main>
 </body>

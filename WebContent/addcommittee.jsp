@@ -78,20 +78,23 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Committee_Servlet" method="post">
-	  <label for="commid">committee id:</label><br>
+	  <label for="commid">Committee ID:</label><br>
 	  <input type="text" id="commid" name="commid" value=""><br>
-	  <label for="commname"> committee name:</label><br>
+	  <label for="commname">Committee Name:</label><br>
 	  <input type="text" id="commname" name="commname" value=""><br>
-	  <label for="commphoneno"> committee phone:</label><br>
+	  <label for="commphoneno">Committee Phone Number:</label><br>
 	  <input type="text" id="commphoneno" name="commphoneno" value=""><br>
-	  <label for="commaddress"> committee address:</label><br>
+	  <label for="commaddress">Committee Address:</label><br>
 	  <input type="text" id="commaddress" name="commaddress" value=""><br>
-	  <label for="commpass"> committee password:</label><br>
+	  <label for="commpass">Committee Password:</label><br>
 	  <input type="text" id="commpass" name="commpass" value=""><br>
-	  <label for="presidentid"> president id:</label><br>
-	  <input type="text" id="presidentid" name="presidentid" value=""><br>
+	  <label for="presidentid">President ID:</label><br>
+	  <select name="presidentid" id="1" value="" class="" required>
+				<option value="">--President ID--</option>
+				<option value="1">1 - Khai</option>
+	  </select><br>
 	  <br>
 	  <br>
 	  

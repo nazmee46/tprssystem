@@ -78,7 +78,7 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Homecommittee.jsp" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<div class="card w-100">
 			<div class="card-header fw-bold">Report List</div>
 			<div class="card-body">
