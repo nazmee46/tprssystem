@@ -7,7 +7,7 @@
 	response.setHeader("Pragma","no-cache");
 	response.setDateHeader ("Expires", 0);
 	
-	if(session.getAttribute("session_resid") == null) {
+	if(session.getAttribute("session_commid") == null) {
 		response.sendRedirect("index.jsp");
 	}
 %>
@@ -42,20 +42,32 @@
 			<c:out value="${session_name}"></c:out>
 		</div>
 		<div class="staff-level px-4 fs-6 text-secondary mb-2">
-			<c:out value="${session_resid}"></c:out>
+			<c:out value="${session_commid}"></c:out>
 		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Report_Servlet_res?action=list" class="nav-link active">
-					<img src="assets/icons/monitor_white.svg" class="pb-1 px-2">
+				<a href="Committee_Servlet?action=list"   class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Committees </label>
+				</a>
+			</li>
+			<li>
+				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet_res?action=list" class="nav-link link-dark">
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet?action=list" class="nav-link active">
+					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
 				</a>
 			</li>
 			<li>
@@ -68,28 +80,28 @@
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
 	<div class="card w-100">
-			<div class="card-header fw-bold">Report List</div>
+			<div class="card-header fw-bold">Company List</div>
 			<div class="card-body">
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
-							<th>Report ID</th>
-							<th>Report Status</th>
-							<th>Action</th>
+							<th>Company ID</th>
+							<th>Company Name</th>
+							<th>Company Phone Number</th>
+							<th>Company Address</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${report}" var="r">
+						<c:forEach items="${company}" var="c">
 							<tr>
-								<td><c:out value="${r.reportid}"></c:out></td>
-								<td><c:out value="${r.reportstatus}"></c:out></td>
-									<td><a  href="Report_Servlet_res?action=view&reportid=<c:out value="${r.reportid}" />" >  View  </a></td> 
-									
+								<td><c:out value="${c.compid}"></c:out></td>
+								<td><c:out value="${c.compname}"></c:out></td>
+								<td><c:out value="${c.compphoneno}"></c:out></td>
+								<td><c:out value="${c.compaddress}"></c:out></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-				<a  href="addreportres.jsp" style="height:40px ">Create Report</a>
 			</div>
 		</div>
 	

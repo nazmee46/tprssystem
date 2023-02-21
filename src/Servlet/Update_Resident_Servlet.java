@@ -27,7 +27,7 @@ public class Update_Resident_Servlet extends HttpServlet {
 	    // TODO Auto-generated method stub
 	    String resid = request.getParameter("resid");
 	    request.setAttribute("resident", ResidentDAO.viewresident(resid));
-	    RequestDispatcher view = request.getRequestDispatcher("updateresident.jsp");
+	    RequestDispatcher view = request.getRequestDispatcher("Updateresident.jsp");
 	    view.forward(request, response);
 	  }
 

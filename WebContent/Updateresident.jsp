@@ -47,19 +47,13 @@
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list" class="nav-link link-dark">
-					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Committees </label>
-				</a>
-			</li>
-			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name"> List of resident</label>
 				</a>

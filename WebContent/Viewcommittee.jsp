@@ -59,9 +59,15 @@
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentac" class="nav-link link-dark">
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
 				</a>
 			</li>
 			<li>
@@ -79,12 +85,12 @@
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
-							<th>ID number</th>
-							<th>Name</th>
-							<th>phone no</th>
-							<th>address</th>
-							<th>password</th>
-							<th>president id</th>
+							<th>Committee ID</th>
+							<th>Committee Name</th>
+							<th>Committee Phone Number</th>
+							<th>Committee Address</th>
+							<th>Committee Password</th>
+							<th>President ID</th>
 						</tr>
 					</thead>
 					<tbody>

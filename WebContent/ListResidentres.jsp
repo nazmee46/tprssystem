@@ -42,25 +42,19 @@
 			<c:out value="${session_name}"></c:out>
 		</div>
 		<div class="staff-level px-4 fs-6 text-secondary mb-2">
-			<c:out value="${session_commid}"></c:out>
+			<c:out value="${session_resid}"></c:out>
 		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list"   class="nav-link link-dark">
-					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Committees </label>
-				</a>
-			</li>
-			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
-					<img src="assets/icons/file.svg" class="pb-1 px-2">
+				<a href="Resident_Servlet_res?action=list" class="nav-link active">
+					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
 				</a>
 			</li>
@@ -89,7 +83,9 @@
 							<tr>
 								<td><c:out value="${r.resid}"></c:out></td>
 								<td><c:out value="${r.resname}"></c:out></td>
-									<td><a  href="Resident_Servlet_res?action=view&resid=<c:out value="${r.resid}" />" >  View  </a></td> 
+									<td><a  href="Resident_Servlet_res?action=view&resid=<c:out value="${r.resid}" />" >  View  </a></td>
+									<td><c:if test="${session_resid==r.resid}">  <a  href="Update_Resident_Servlet?resid=<c:out value="${r.resid}" />" >Update</a>    </c:if></td> 
+    								<td><c:if test="${session_resid==r.resid}">  <a  href="Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />" >Delete</a>    </c:if></td> 
 									
    								  
 							</tr>

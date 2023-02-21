@@ -36,7 +36,7 @@ public class Login_ServletResident extends HttpServlet {
 		}
 		else {
 			session.setAttribute("session_status", resident_login.isValidLogin());
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("loginresident.jsp");
 		}
 	}
 }

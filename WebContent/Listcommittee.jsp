@@ -65,6 +65,12 @@
 				</a>
 			</li>
 			<li>
+				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
+				</a>
+			</li>
+			<li>
 				<a href="Logout_Servlet" class="nav-link link-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="assets/icons/log_out.svg" class="pb-1 px-2">
 					<label class="link-name">Log out</label>
 				</a>
@@ -100,7 +106,6 @@
 				<a  href="addcommittee.jsp" style="height:40px ">Add Committee</a>
 			</div>
 		</div>
-	
 	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
@@ -118,7 +123,5 @@
 	</div>
 	<script src="assets/js/bootstrap.js"></script>
 	<script src="assets/js/form-validation.js"></script>
-	
 </body>
-
 </html>

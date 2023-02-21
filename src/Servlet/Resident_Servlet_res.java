@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.RequestDispatcher;
 
 import Model.Resident;
-
+import DAO.CommitteeDAO;
 import DAO.ResidentDAO;
 
 @WebServlet("/Resident_Servlet_res")
@@ -45,7 +45,14 @@ public class Resident_Servlet_res extends HttpServlet {
 
     	    }
 
-    	   
+    	 // Complete action for delete 
+    	    if (action.equalsIgnoreCase("delete")) {
+    	      forward = LIST;
+    	      resid = request.getParameter("resid");
+    	      residentdao.deleteresident(resid);
+    	      request.setAttribute("resident", ResidentDAO.getresidentlist());
+    	      response.sendRedirect("index.jsp");
+    	    }
 
     	    // forward the request
     	    RequestDispatcher view = request.getRequestDispatcher(forward);

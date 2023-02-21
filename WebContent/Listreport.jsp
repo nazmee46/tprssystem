@@ -65,6 +65,12 @@
 				</a>
 			</li>
 			<li>
+				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
+				</a>
+			</li>
+			<li>
 				<a href="Logout_Servlet" class="nav-link link-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="assets/icons/log_out.svg" class="pb-1 px-2">
 					<label class="link-name">Log out</label>
 				</a>

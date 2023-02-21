@@ -59,9 +59,15 @@
 				</a>
 			</li>
 			<li>
-				<a href="Redirect_Servlet?action=equipmentac" class="nav-link link-dark">
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
 				</a>
 			</li>
 			<li>
@@ -74,18 +80,18 @@
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
 	<form action="Update_Committee_Servlet" method="post">
-	  <label for="commphoneno"> committee phone:</label><br>
+	  <label for="commphoneno"> Committee Phone Number:</label><br>
 	  <input type="text" id="commphoneno" name="commphoneno" value="<c:out value="${committee.commphoneno}"/>"><br>
-	  <label for="commaddress"> committee address:</label><br>
+	  <label for="commaddress"> Committee Address:</label><br>
 	  <input type="text" id="commaddress" name="commaddress" value="<c:out value="${committee.commaddress}"/>"><br>
-	  <label for="commpass"> committee password:</label><br>
+	  <label for="commpass"> Committee Password:</label><br>
 	  <input type="text" id="commpass" name="commpass" value="<c:out value="${committee.commpass}"/>"><br>
 	  <label for="commid"></label><br>
 	  <input type="hidden" id="commid" name="commid" value="<c:out value="${committee.commid}"/>"><br>
 	  <br>
 	  <br>
 	  
-	  <input type="submit" value="update">
+	  <input type="submit" value="UPDATE">
 	  
 	  
 	</form>
