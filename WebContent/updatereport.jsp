@@ -48,30 +48,35 @@ if (session.getAttribute("session_commid") == null) {
 		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
-			<li><a href="Committee_Servlet?action=list"
-				class="nav-link link-dark"> <img src="assets/icons/file.svg"
-					class="pb-1 px-2"> <label class="link-name">Lists of
-						Committees </label>
-			</a></li>
-			<li><a href="Report_Servlet?action=list"
-				class="nav-link active"> <img src="assets/icons/monitor_white.svg"
-					class="pb-1 px-2"> <label class="link-name">Report</label>
-			</a></li>
-			<li><a href="Residentt_Servlet?action=list"
-				class="nav-link link-dark"> <img src="assets/icons/file.svg"
-					class="pb-1 px-2"> <label class="link-name">Lists of
-						Resident</label>
-			</a></li>
-			<li><a href="Company_Servlet?action=list"
-				class="nav-link link-dark"> <img src="assets/icons/file.svg"
-					class="pb-1 px-2"> <label class="link-name">Lists of
-						Company</label>
-			</a></li>
-			<li><a href="Logout_Servlet" class="nav-link link-dark"
-				data-bs-toggle="modal" data-bs-target="#exampleModal"> <img
-					src="assets/icons/log_out.svg" class="pb-1 px-2"> <label
-					class="link-name">Log out</label>
-			</a></li>
+			<li>
+				<a href="Committee_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Committees </label>
+				</a>
+			</li>
+			<li>
+				<a href="Report_Servlet?action=list" class="nav-link active">
+					<img src="assets/icons/monitor_white.svg" class="pb-1 px-2">
+					<label class="link-name">Report</label>
+				</a>
+			</li>
+			<li>
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Resident</label>
+				</a>
+			</li>
+			<li>
+				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
+					<label class="link-name">Lists of Company</label>
+				</a>
+			</li>
+			<li>
+				<a href="Logout_Servlet" class="nav-link link-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="assets/icons/log_out.svg" class="pb-1 px-2">
+					<label class="link-name">Log out</label>
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div class="content p-3">

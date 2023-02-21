@@ -47,7 +47,7 @@
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list"   class="nav-link link-dark">
+				<a href="Committee_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Committees </label>
 				</a>
@@ -63,7 +63,8 @@
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
 				</a>
-			</li><li>
+			</li>
+			<li>
 				<a href="Company_Servlet?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Company</label>

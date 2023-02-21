@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table, tr, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px 20px;
+    }
+  </style>
+  <script>
+		window.onload = function() {
+      let table = document.getElementById('table');
+
+			var request = new XMLHttpRequest();
+			request.open("GET", "https://microservice-2023.herokuapp.com/", true);
+			request.onload = function() {
+				var stud_object = JSON.parse(this.response);
+        stud_object.forEach(elem => {
+          let row = document.createElement('tr');
+          let td1 = document.createElement('td');
+          let td2 = document.createElement('td');
+          td1.innerHTML = elem.commid;
+          td2.innerHTML = elem.commname;
+          row.appendChild(td1);
+          row.appendChild(td2);
+          table.appendChild(row);
+        });
+			}
+			request.send();
+		}
+	</script>
+</head>
+<body>
+  <table id="table">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+  </table>
+</body>
+</html>
