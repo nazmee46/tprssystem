@@ -11,7 +11,7 @@ import Model.Resident;
 
 import DAO.ResidentDAO;
 
-@WebServlet("/Update_Committee_Servlet")
+@WebServlet("/Update_Resident_Servlet")
 public class Update_Resident_Servlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
