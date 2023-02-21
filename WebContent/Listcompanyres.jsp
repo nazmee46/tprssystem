@@ -73,6 +73,32 @@
 	</div>
 	<div class="content p-3">
 	<button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>
+	<div class="card w-100">
+			<div class="card-header fw-bold">Company List</div>
+			<div class="card-body">
+				<table id="example" class="display" style="width: 100%">
+					<thead>
+						<tr>
+							<th>Company ID</th>
+							<th>Company Name</th>
+							<th>Company Phone Number</th>
+							<th>Company Address</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${company}" var="c">
+							<tr>
+								<td><c:out value="${c.compid}"></c:out></td>
+								<td><c:out value="${c.compname}"></c:out></td>
+								<td><c:out value="${c.compphoneno}"></c:out></td>
+								<td><c:out value="${c.compaddress}"></c:out></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	
 	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
