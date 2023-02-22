@@ -82,16 +82,16 @@ if (session.getAttribute("session_commid") == null) {
 	<div class="content p-3">
 		<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 		<form action="Update_Report_Servlet" method="post">
-			<label for="reportid"> report ID:</label><br> <input type="text"
+			<label for="reportid"> Report ID:</label><br> <input type="text"
 				id="reportid" name="reportid"
 				value="<c:out value="${report.reportid}"/>" disabled><br>
-			<label for="reportstatus"> report status:</label><br>
+			<label for="reportstatus"> Report Status:</label><br>
 			<select
 				name="reportstatus" id="reportstatus"
 				value="<c:out value="${report.reportstatus}" />" class="" required>
 				<option value="">--Status--</option>
-				<option value="in progress">in progress</option>
-				<option value="completed">complete</option>
+				<option value="In Progress">In Progress</option>
+				<option value="Completed">Completed</option>
 			</select><br>
 			<label for="compid"> Assign company:</label><br>
 			<select
@@ -103,7 +103,7 @@ if (session.getAttribute("session_commid") == null) {
 				<option value="3">3 - Civillian William</option>
 			</select><br>
 				<input type="hidden" id="reportid" name="reportid" value="<c:out value="${report.reportid}"/>">
-			<br> <br> <input type="submit" value="update">
+			<br> <br> <input type="submit" value="UPDATE">
 		</form>
 	</div>
 
