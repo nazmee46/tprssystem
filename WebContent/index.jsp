@@ -27,7 +27,7 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="logincommittee.jsp" data-after="Home">Committees Login</a></li>
+            <li><a href="logincommittee.jsp" data-after="Home">Committee Login</a></li>
             <li><a href="loginresident.jsp" data-after="Service">Resident Login</a></li>
             <li><a href="createResident.jsp" data-after="Projects">Resident Sign Up</a></li>
           </ul>
