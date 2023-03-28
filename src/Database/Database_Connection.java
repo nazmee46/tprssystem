@@ -11,9 +11,9 @@ public class Database_Connection {
 //	private static final String DB_PASSWORD = "system";
 	
 	private static final String DB_DRIVER = "org.postgresql.Driver";
-	private static final String DB_CONNECTION = "jdbc:postgresql://ec2-34-194-158-176.compute-1.amazonaws.com:5432/df2vgfq54gceej";
-	private static final String DB_USERNAME = "lmhrwfibwopckp";
-	private static final String DB_PASSWORD = "67fb2c92cbb0266092ddcbb3a8743609bf7194658569cece25302d1e17ea652f";
+	private static final String DB_CONNECTION = "jdbc:postgresql://ec2-23-20-140-229.compute-1.amazonaws.com:5432/dvhqmt96jbi20";
+	private static final String DB_USERNAME = "svbyiezukzwlds";
+	private static final String DB_PASSWORD = "46d4760f15178d4508d62877450eb1b43d89b9400c2127e2d314f04897e1d40d";
 	
 	public static Connection getConnection() {
 		try {
