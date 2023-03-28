@@ -4,12 +4,7 @@ import java.sql.*;
 
 public class Database_Connection {
 	private static Connection connect;
-//	localhost Postgres database connection
-//	private static final String DB_DRIVER = "org.postgresql.Driver";
-//	private static final String DB_CONNECTION = "jdbc:postgresql://localhost:5432/academic_inventory";
-//	private static final String DB_USERNAME = "postgres";
-//	private static final String DB_PASSWORD = "system";
-	
+
 	private static final String DB_DRIVER = "org.postgresql.Driver";
 	private static final String DB_CONNECTION = "jdbc:postgresql://ec2-23-20-140-229.compute-1.amazonaws.com:5432/dvhqmt96jbi20";
 	private static final String DB_USERNAME = "svbyiezukzwlds";
