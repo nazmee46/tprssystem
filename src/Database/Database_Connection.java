@@ -9,7 +9,7 @@ public class Database_Connection {
 	private static final String DB_CONNECTION = "jdbc:postgresql://ec2-23-20-140-229.compute-1.amazonaws.com:5432/dvhqmt96jbi20";
 	private static final String DB_USERNAME = "svbyiezukzwlds";
 	private static final String DB_PASSWORD = "46d4760f15178d4508d62877450eb1b43d89b9400c2127e2d314f04897e1d40d";
-	
+
 	public static Connection getConnection() {
 		try {
 			Class.forName(DB_DRIVER);
