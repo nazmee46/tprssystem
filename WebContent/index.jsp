@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
   <link rel="stylesheet" href="assets/css/home.css">
-  <title>HomePageses</title>
+  <title>HomePages</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="logincommittee.jsp" data-after="Home">Committee Login</a></li>
+            <li><a href="logincommittee.jsp" data-after="Home">Committees Login</a></li>
             <li><a href="loginresident.jsp" data-after="Service">Resident Login</a></li>
             <li><a href="createResident.jsp" data-after="Projects">Resident Sign Up</a></li>
           </ul>
