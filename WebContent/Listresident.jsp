@@ -96,6 +96,7 @@
 								<td><c:out value="${r.resid}"></c:out></td>
 								<td><c:out value="${r.resname}"></c:out></td>
 									<td><a  href="Resident_Servlet?action=view&resid=<c:out value="${r.resid}" />" >  View  </a></td> 
+									<td><a  href="Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />" >Delete</a></td>
 									
    								  
 							</tr>

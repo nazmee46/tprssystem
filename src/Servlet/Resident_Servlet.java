@@ -44,7 +44,13 @@ public class Resident_Servlet extends HttpServlet {
     	      request.setAttribute("resident", ResidentDAO.getresidentlist());
 
     	    }
-
+    	    if (action.equalsIgnoreCase("delete")) {
+      	      forward = LIST;
+      	      resid = request.getParameter("resid");
+      	      residentdao.deleteresident(resid);
+      	      request.setAttribute("resident", ResidentDAO.getresidentlist());
+      	     
+      	    }
     	   
 
     	    // forward the request
@@ -52,6 +58,8 @@ public class Resident_Servlet extends HttpServlet {
     	    view.forward(request, response);
 
     	  }
+    
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Resident r = new Resident();
 		session = request.getSession(true);
