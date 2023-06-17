@@ -94,7 +94,7 @@
 			</select><br>
 	  <label for="resid"> Resident ID:</label><br>
 	  <input type="text" id="resid" name="resid" value=""required><br>
-	  <label for="reportdate"> Report Date (day-month-year):</label><br>
+	  <label for="reportdate"> Report Date (day-month-years):</label><br>
 	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"required><br>
 	  
 	  <br>
