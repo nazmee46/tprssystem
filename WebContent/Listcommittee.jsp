@@ -99,12 +99,13 @@
 									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
 									<td><c:if test="${session_commid==ci.commid}">  <a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />" >Update</a>    </c:if></td> 
     								<td><c:if test="${session_commid==1}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
-   								  
+   								  	<td><c:if test="${session_commid==2}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
 				<c:if test="${session_commid==1}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
+				<c:if test="${session_commid==2}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
 			</div>
 		</div>
 	</div>
