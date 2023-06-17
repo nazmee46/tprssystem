@@ -81,15 +81,15 @@
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Committee_Servlet" method="post">
 	  <label for="commid">Committee ID:</label><br>
-	  <input type="text" id="commid" name="commid" value=""><br>
+	  <input type="text" id="commid" name="commid" value="" required><br>
 	  <label for="commname">Committee Name:</label><br>
-	  <input type="text" id="commname" name="commname" value=""><br>
+	  <input type="text" id="commname" name="commname" value="" required><br>
 	  <label for="commphoneno">Committee Phone Number:</label><br>
-	  <input type="text" id="commphoneno" name="commphoneno" value=""><br>
+	  <input type="text" id="commphoneno" name="commphoneno" value="" required><br>
 	  <label for="commaddress">Committee Address:</label><br>
-	  <input type="text" id="commaddress" name="commaddress" value=""><br>
+	  <input type="text" id="commaddress" name="commaddress" value="" required><br>
 	  <label for="commpass">Committee Password:</label><br>
-	  <input type="text" id="commpass" name="commpass" value=""><br>
+	  <input type="text" id="commpass" name="commpass" value="" required><br>
 	  <label for="presidentid">President ID:</label><br>
 	  <select name="presidentid" id="1" value="" class="" required>
 				<option value="">--President ID--</option>

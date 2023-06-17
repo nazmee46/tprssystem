@@ -83,6 +83,8 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Committee List</div>
 			<div class="card-body">
+				<c:if test="${session_commid==1}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
+				<c:if test="${session_commid==2}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
@@ -104,8 +106,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<c:if test="${session_commid==1}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
-				<c:if test="${session_commid==2}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
+				 
 			</div>
 		</div>
 	</div>

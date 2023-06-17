@@ -29,7 +29,7 @@
           <ul>
             <li><a href="logincommittee.jsp" data-after="Home">Committee Log in</a></li>
             <li><a href="loginresident.jsp" data-after="Service">Resident Log in</a></li>
-            <li><a href="createResident.jsp" data-after="Projects">Resident Sign Up</a></li>
+          
           </ul>
         </div>
       </div>
