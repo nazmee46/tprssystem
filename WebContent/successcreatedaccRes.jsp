@@ -24,7 +24,7 @@
 <body>
 	
 	<h1>Successfully created account</h1>
-	<a  href="index.jsp" >  click here to return to Home page  </a>
+	<a  href="Homecommittee.jsp" >  click here to return to Home page  </a>
 	 
 	
 	<script src="assets/js/bootstrap.js"></script>

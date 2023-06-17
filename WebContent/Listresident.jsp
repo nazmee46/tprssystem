@@ -82,6 +82,7 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Resident List</div>
 			<div class="card-body">
+				<a href="createResident.jsp" >Create Resident Account</a>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
