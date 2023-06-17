@@ -26,7 +26,9 @@
 	
 		<input type="button" class="w-50 p-3 fw-bold bg-accent" value="">
 	<form action="Resident_Servlet_res" method="post" class="m-4">
+	<label>Create Resident Account</label>
 	<div class="form-floating">
+				
 				<input type="text" name="resid" id="resid" class="form-control" required>
 				<label>Enter ID</label>
 			</div><br>
