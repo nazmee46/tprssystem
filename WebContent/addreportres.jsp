@@ -75,9 +75,9 @@
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Report_Servlet_res" method="post">
 	  <label for="reportid">Report ID:</label><br>
-	  <input type="text" id="reportid" name="reportid" value=""><br>
+	  <input type="text" id="reportid" name="reportid" value=""required><br>
 	  <label for="reportdesc"> Report Description:</label><br>
-	  <input type="text" id="reportdesc" name="reportdesc" value=""><br>
+	  <input type="text" id="reportdesc" name="reportdesc" value=""required><br>
 	  <label for="reporttype"> Report Type:</label><br>
 	  <select
 				name="reporttype" id="reporttype" class="" required>
@@ -93,9 +93,9 @@
 				<option value="Report Created">Report Created</option>
 			</select><br>
 	  <label for="resid"> Resident ID:</label><br>
-	  <input type="text" id="resid" name="resid" value=""><br>
+	  <input type="text" id="resid" name="resid" value=""required><br>
 	  <label for="reportdate"> Report Date (day-month-year):</label><br>
-	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"><br>
+	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"required><br>
 	  
 	  <br>
 	  <br>
