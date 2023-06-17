@@ -75,11 +75,11 @@
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Update_Resident_Servlet" method="post">
 	  <label for="resphoneno"> Resident Phone Number:</label><br>
-	  <input type="text" id="resphoneno" name="resphoneno" value="<c:out value="${resident.resphoneno}"/>"><br>
+	  <input type="text"  id="resphoneno" name="resphoneno" value="<c:out value="${resident.resphoneno}"/>"required><br>
 	  <label for="resaddress"> Resident Address:</label><br>
-	  <input type="text" id="resaddress" name="resaddress" value="<c:out value="${resident.resaddress}"/>"><br>
+	  <input type="text" id="resaddress" name="resaddress" value="<c:out value="${resident.resaddress}"/>"required><br>
 	  <label for="respass"> Resident Password:</label><br>
-	  <input type="text" id="respass" name="respass" value="<c:out value="${resident.respass}"/>"><br>
+	  <input type="text" id="respass" name="respass" value="<c:out value="${resident.respass}"/>"required><br>
 	  <label for="resid"></label><br>
 	  <input type="hidden" id="resid" name="resid" value="<c:out value="${resident.resid}"/>"><br>
 	  <br>

@@ -92,10 +92,10 @@
 				<option value="">--Report Status--</option>
 				<option value="Report Created">Report Created</option>
 			</select><br>
-	  <label for="resid"> Resident ID:</label><br>
+	  <label for="resid"> Resident ID	(your own resident ID):</label><br>
 	  <input type="text" id="resid" name="resid" value=""required><br>
-	  <label for="reportdate"> Report Date (day-month-years):</label><br>
-	  <input type="text" id="reportdate" name="reportdate" value="dd-mm-yyyy"required><br>
+	  <label for="reportdate"> Report Date (dd-mm-year)	example:(10-02-2023):</label><br>
+	  <input type="text" id="reportdate" name="reportdate" value=""required><br>
 	  
 	  <br>
 	  <br>

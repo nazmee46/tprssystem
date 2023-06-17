@@ -98,7 +98,7 @@
 				<option value="">--Report Status--</option>
 				<option value="Report Created">Report Created</option>
 			</select><br>
-	  <label for="commid">Committee ID:</label><br>
+	  <label for="commid">Committee ID	(your own committee ID):</label><br>
 	  <input type="text" id="commid" name="commid" value="" required><br>
 	  <label for="reportdate">Report Date (dd-mm-year)	example:(10-02-2023):</label><br>
 	  <input type="text" id="reportdate" name="reportdate" value=""required><br>

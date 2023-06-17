@@ -76,6 +76,7 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Report List</div>
 			<div class="card-body">
+				<a  href="addreportres.jsp" style="height:40px ">Create Report</a>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
@@ -95,7 +96,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<a  href="addreportres.jsp" style="height:40px ">Create Report</a>
+				
 			</div>
 		</div>
 	
