@@ -91,7 +91,7 @@
 	<section id="hero">
     <div class="hero container">
       <div>
-        <h1 style="color:white;">Successfully created report</h1>
+        <h1 style="color:white;">Successfully created reports</h1>
 		<a  href="Homecommittee.jsp" >  click here to return to Home page  </a>
       </div>
     </div>

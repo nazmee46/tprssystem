@@ -72,11 +72,7 @@ public class Report_Servlet_res extends HttpServlet {
 		
 		reportdao.addreport(r);
 		
-		request.setAttribute( "report" , ReportDAO.getreportlist());
-		forward=LIST;
-		RequestDispatcher view =request.getRequestDispatcher(forward);
-		view.forward(request, response);
-		
+		response.sendRedirect("successcreatedreportRes.jsp");
 		
 	
 	}
