@@ -13,7 +13,14 @@
 %>
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +43,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color:white;">
 	<div class="sidebar p-3 bg-accent">
 		<div class="staff-name px-4 fs-5 fw-bold">
 			<c:out value="${session_name}"></c:out>
@@ -59,8 +66,8 @@
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link active">
-					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
+				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/file.svg" class="pb-1 px-2">
 					<label class="link-name">Lists of Resident</label>
 				</a>
 			</li>
@@ -78,30 +85,21 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<form action="Resident_Servlet_res" method="post">
-		<label>Create Resident  Account</label><br>
-	  <label for="resid">Resident ID:</label><br>
-	  <input type="text" id="resid" name="resid" value="" required><br>
-	  <label for="resname">Resident Name:</label><br>
-	  <input type="text" id="resname" name="resname" value="" required><br>
-	  <label for="resphoneno">Resident Phone Number:</label><br>
-	  <input type="text" id="resphoneno" name="resphoneno" value="" required><br>
-	  <label for="resaddress">Resident Address:</label><br>
-	  <input type="text" id="resaddress" name="resaddress" value="" required><br>
-	  <label for="respass">Resident Password:</label><br>
-	  <input type="text" id="respass" name="respass" value="" required><br>
-	  
-	  <br>
-	  <br>
-	  
-	  <input type="submit" value="Add Resident">
-	  
-	  
-	</form>
-	</div>
 	
-	 
+	<!-- <button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>-->
+	<div class="card w-100" style="background-color:#d5d9dd;">
+	<section id="hero">
+    <div class="hero container">
+      <div>
+        <h1 style="color:white;">Successfully created account</h1>
+		<a  href="Homecommittee.jsp" >  click here to return to Home page  </a>
+      </div>
+    </div>
+   
+    
+  </section>
+		</div>
+	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">

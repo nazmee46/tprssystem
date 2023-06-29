@@ -82,6 +82,7 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Company List</div>
 			<div class="card-body">
+			
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>

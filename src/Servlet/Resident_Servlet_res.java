@@ -71,7 +71,7 @@ public class Resident_Servlet_res extends HttpServlet {
 		
 		
 		residentdao.addresident(r);
-		response.sendRedirect("successcreatedaccRes.jsp");
+		response.sendRedirect("successcreatedacc.jsp");
 		
 	
 		

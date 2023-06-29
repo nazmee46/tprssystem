@@ -70,11 +70,7 @@ public class Committee_Servlet extends HttpServlet {
 		c.setPresidentid(request.getParameter("presidentid"));
 		
 		committeedao.addcommittee(c);
-		
-		request.setAttribute( "committee" , CommitteeDAO.getcommitteelist());
-		forward=LIST;
-		RequestDispatcher view =request.getRequestDispatcher(forward);
-		view.forward(request, response);
+		response.sendRedirect("successcreatedacc.jsp");
 		
 		
 	

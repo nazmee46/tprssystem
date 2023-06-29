@@ -80,6 +80,7 @@
 	<div class="content p-3">
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
 	<form action="Committee_Servlet" method="post">
+		<label>Create Committee Account</label><br>
 	  <label for="commid">Committee ID:</label><br>
 	  <input type="text" id="commid" name="commid" value="" required><br>
 	  <label for="commname">Committee Name:</label><br>
