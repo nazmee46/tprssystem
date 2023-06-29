@@ -7,7 +7,7 @@
 	response.setHeader("Pragma","no-cache");
 	response.setDateHeader ("Expires", 0);
 	
-	if(session.getAttribute("session_commid") == null) {
+	if(session.getAttribute("session_resid") == null) {
 		response.sendRedirect("index.jsp");
 	}
 %>
@@ -43,38 +43,32 @@
     </script>
 </head>
 
-<body style="background-color:white;">
+<body>
 	<div class="sidebar p-3 bg-accent">
 		<div class="staff-name px-4 fs-5 fw-bold">
 			<c:out value="${session_name}"></c:out>
 		</div>
 		<div class="staff-level px-4 fs-6 text-secondary mb-2">
-			<c:out value="${session_commid}"></c:out>
+			<c:out value="${session_resid}"></c:out>
 		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list" class="nav-link link-dark">
-					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Committees </label>
-				</a>
-			</li>
-			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name">List of Residents</label>
 				</a>
 			</li>
 			<li>
-				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+				<a href="Company_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Company</label>
+					<label class="link-name">List of Company</label>
 				</a>
 			</li>
 			<li>
@@ -85,17 +79,15 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	
-	<!-- <button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>-->
 	<div class="card w-100" style="background-color:#d5d9dd;">
 	<section id="hero">
     <div class="hero container">
       <div>
         <h1 style="color:white;">Successfully created report</h1>
-		<a  href="Homecommittee.jsp" >  click here to return to Home page  </a>
+		<a  href="Homeresident.jsp" >  click here to return to Home page  </a>
       </div>
     </div>
-   
+  
     
   </section>
 		</div>
