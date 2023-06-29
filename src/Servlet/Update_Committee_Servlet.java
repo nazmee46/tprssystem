@@ -47,7 +47,7 @@ public class Update_Committee_Servlet extends HttpServlet {
 	    committeedao.updatecommittee(c); 
 	    
 	    request.setAttribute("committee", CommitteeDAO.getcommitteelist());
-	    RequestDispatcher view = request.getRequestDispatcher("Listcommittee.jsp");
+	    RequestDispatcher view = request.getRequestDispatcher("successupdatecom.jsp");
 	    view.forward(request, response);
 	  }
 	
