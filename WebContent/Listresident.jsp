@@ -82,7 +82,7 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Resident List</div>
 			<div class="card-body">
-				<a href="createResident.jsp" >Create Resident Account</a>
+				<button class="btn btn-danger" onclick="location.href = 'createResident.jsp'" >Create Resident Account</button>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
@@ -96,10 +96,8 @@
 							<tr>
 								<td><c:out value="${r.resid}"></c:out></td>
 								<td><c:out value="${r.resname}"></c:out></td>
-									<td><a  href="Resident_Servlet?action=view&resid=<c:out value="${r.resid}" />" >  View  </a></td> 
-									<td><a  href="Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />" >Delete</a></td>
-									
-   								  
+									<td><button class="btn btn-primary" onclick="location.href = 'Resident_Servlet?action=view&resid=<c:out value="${r.resid}" />'" >  View  </button> 
+									<button class="btn btn-danger" onclick="location.href = 'Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />'" >Delete</button></td>
 							</tr>
 						</c:forEach>
 					</tbody>

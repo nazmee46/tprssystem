@@ -76,7 +76,7 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Report List</div>
 			<div class="card-body">
-				<a  href="addreportres.jsp" style="height:40px ">Create Report</a>
+				<button class="btn btn-danger" onclick="location.href = 'addreportres.jsp'">Create Report</button>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
@@ -90,7 +90,7 @@
 							<tr>
 								<td><c:out value="${r.reportid}"></c:out></td>
 								<td><c:out value="${r.reportstatus}"></c:out></td>
-									<td><a  href="Report_Servlet_res?action=view&reportid=<c:out value="${r.reportid}" />" >  View  </a></td> 
+								<td><button class="btn btn-primary" onclick="location.href = 'Report_Servlet_res?action=view&reportid=<c:out value="${r.reportid}" />'">View</button>
 									
 							</tr>
 						</c:forEach>

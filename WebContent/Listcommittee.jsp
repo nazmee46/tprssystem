@@ -82,8 +82,8 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Committee List</div>
 			<div class="card-body">
-				<c:if test="${session_commid==1}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
-				<c:if test="${session_commid==2}"> <a  href="addcommittee.jsp" style="height:40px ">Add Committee</a></c:if>
+				<c:if test="${session_commid==1}"> <button class="btn btn-danger" onclick="location.href = 'addcommittee.jsp'">Add Committee</button></c:if>
+				<c:if test="${session_commid==2}"> <button class="btn btn-danger" onclick="location.href = 'addcommittee.jsp'">Add Committee</button></c:if>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
@@ -97,10 +97,10 @@
 							<tr>
 								<td><c:out value="${ci.commid}"></c:out></td>
 								<td><c:out value="${ci.commname}"></c:out></td>
-									<td><a  href="Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />" >  View  </a></td> 
-									<td><c:if test="${session_commid==ci.commid}">  <a  href="Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />" >Update</a>    </c:if></td> 
-    								<td><c:if test="${session_commid==1}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
-   								  	<td><c:if test="${session_commid==2}">  <a  href="Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />" >Delete</a>    </c:if></td>
+									<td><button class="btn btn-primary" onclick="location.href = 'Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />'" >  View  </button> 
+									<c:if test="${session_commid==ci.commid}">  <button class="btn btn-success" onclick="location.href = 'Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />'" >Update</button>    </c:if> 
+    								<c:if test="${session_commid==1}">  <button class="btn btn-danger" onclick="location.href = 'Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />'" >Delete</button>    </c:if>
+   								  	<c:if test="${session_commid==2}">  <button class="btn btn-danger" onclick="location.href = 'Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />'" >Delete</button>    </c:if></td>
 							</tr>
 						</c:forEach>
 					</tbody>
