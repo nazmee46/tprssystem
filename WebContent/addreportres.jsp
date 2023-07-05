@@ -73,37 +73,45 @@
 	</div>
 	<div class="content p-3">
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<form action="Report_Servlet_res" method="post">
+	<main class="form-signin text-center bg-accent">
+	<form action="Report_Servlet_res" method="post" class="m-4">
+	<br>
+	<h1 class="h3 fw-normal fw-bold">Create Report Form</h1><br>
 	  <label for="reportid">Report ID:</label><br>
-	  <input type="text" id="reportid" name="reportid" value=""required><br>
+	  <label><i><font size=2>*YourID_Date_NoOfReportOfTheDay</font></i></label><br>
+	  <label><i><font size=2>**Example: JA01AH_1202_1</font></i></label>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="reportid" name="reportid" value=""required></center><br>
+	  
 	  <label for="reportdesc"> Report Description:</label><br>
-	  <input type="text" id="reportdesc" name="reportdesc" value=""required><br>
+	  <label><i><font size=2>*What happen and where?</font></i></label><br>
+	  <label><i><font size=2>**Example: Lampu rosak di Lorong 17</font></i></label>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="reportdesc" name="reportdesc" value=""required></center><br>
 	  <label for="reporttype"> Report Type:</label><br>
-	  <select
-				name="reporttype" id="reporttype" class="" required>
+	  <center><select name="reporttype" id="reporttype" class="form-control" style="width: 200px;" required>
 				<option value="">--Report Type--</option>
 				<option value="Civil">Civil</option>
 				<option value="Electrical">Electrical</option>
 				<option value="Safety">Safety</option>
-			</select><br>
+			</select></center><br>
 	  <label for="reportstatus">Report Status:</label><br>
-<select
-				name="reportstatus" id="reportstatus" class="" required>
+			<center><select	name="reportstatus" id="reportstatus" class="form-control" style="width: 200px;" required>
 				<option value="">--Report Status--</option>
 				<option value="Report Created">Report Created</option>
-			</select><br>
-	  <label for="resid"> Resident ID	(your own resident ID):</label><br>
-	  <input type="text" id="resid" name="resid" value=""required><br>
-	  <label for="reportdate"> Report Date (dd-mm-year)	example:(10-02-2023):</label><br>
-	  <input type="text" id="reportdate" name="reportdate" value=""required><br>
+			</select></center><br>
+	  <label for="resid"> Resident ID:</label><br>
+	  <label><i><font size=2>*Your ID</font></i></label><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resid" name="resid" value=""required></center><br>
+	  <label for="reportdate"> Report Date:</label><br>
+	  <label><i><font size=2>*dd-mm-yyyy</font></i></label><br>
+	  <label><i><font size=2>**Example: 23-04-2023</font></i></label>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="reportdate" name="reportdate" value=""required></center><br>
 	  
-	  <br>
-	  <br>
 	  
-	  <input type="submit" value="Create Report">
+	  <input class="btn btn-primary" type="submit" value="Create Report"><br><br>
 	  
 	  
 	</form>
+	</main>
 	</div>
 	
 	 

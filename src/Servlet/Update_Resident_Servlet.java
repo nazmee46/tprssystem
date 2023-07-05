@@ -47,7 +47,7 @@ public class Update_Resident_Servlet extends HttpServlet {
 	    residentdao.updateresident(r); 
 	    
 	    request.setAttribute("resident", ResidentDAO.getresidentlist());
-	    RequestDispatcher view = request.getRequestDispatcher("ListResidentres.jsp");
+	    RequestDispatcher view = request.getRequestDispatcher("successupdateres.jsp");
 	    view.forward(request, response);
 	  }
 	

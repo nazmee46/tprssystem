@@ -73,25 +73,27 @@
 	</div>
 	<div class="content p-3">
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet_res?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<form action="Update_Resident_Servlet" method="post">
+	<main class="form-signin text-center mt-8 bg-accent">
+	<form action="Update_Resident_Servlet" method="post" class="m-4">
+	  <br>
+	  <h1 class="h3 fw-normal fw-bold">Update Details Form</h1><br>
 	  <label for="resphoneno"> Resident Phone Number:</label><br>
-	  <input type="text"  id="resphoneno" name="resphoneno" value="<c:out value="${resident.resphoneno}"/>"required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resphoneno" name="resphoneno" value="<c:out value="${resident.resphoneno}"/>"required></center><br>
 	  <label for="resaddress"> Resident Address:</label><br>
-	  <input type="text" id="resaddress" name="resaddress" value="<c:out value="${resident.resaddress}"/>"required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resaddress" name="resaddress" value="<c:out value="${resident.resaddress}"/>"required></center><br>
 	  <label for="respass"> Resident Password:</label><br>
-	  <input type="text" id="respass" name="respass" value="<c:out value="${resident.respass}"/>"required><br>
+	  <center><input class="form-control" style="width: 200px;" type="password" id="respass" name="respass" value="<c:out value="${resident.respass}"/>"required></center><br>
 	  <label for="resid"></label><br>
-	  <input type="hidden" id="resid" name="resid" value="<c:out value="${resident.resid}"/>"><br>
+	  <input type="hidden" id="resid" name="resid" value="<c:out value="${resident.resid}"/>">
+	  
+	  <input class="btn btn-primary" type="submit" value="UPDATE">
 	  <br>
 	  <br>
-	  
-	  <input type="submit" value="UPDATE">
-	  
 	  
 	</form>
+	</main>
 	</div>
 	
-	 
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">

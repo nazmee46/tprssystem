@@ -91,8 +91,8 @@
 	<section id="hero">
     <div class="hero container">
       <div>
-        <h1 style="color:white;">Successfully updated account</h1>
-		<a  href="Homecommittee.jsp" >  click here to return to Home page  </a>
+        <h1 style="color:white;">Successfully Updated Account</h1>
+		<button class="btn btn-success" onclick="location.href = 'Homecommittee.jsp'" >  Click here to return to Homepage  </button>
       </div>
     </div>
    

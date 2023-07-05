@@ -79,22 +79,23 @@
 	</div>
 	<div class="content p-3">
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<form action="Update_Committee_Servlet" method="post">
+	<main class="form-signin text-center mt-8 bg-accent">
+	<form action="Update_Committee_Servlet" method="post"><br>
+	  <h1 class="h3 fw-normal fw-bold">Update Details Form</h1><br>
 	  <label for="commphoneno"> Committee Phone Number:</label><br>
-	  <input type="text" id="commphoneno" name="commphoneno" value="<c:out value="${committee.commphoneno}"/>"required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commphoneno" name="commphoneno" value="<c:out value="${committee.commphoneno}"/>"required></center><br>
 	  <label for="commaddress"> Committee Address:</label><br>
-	  <input type="text" id="commaddress" name="commaddress" value="<c:out value="${committee.commaddress}"/>"required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commaddress" name="commaddress" value="<c:out value="${committee.commaddress}"/>"required></center><br>
 	  <label for="commpass"> Committee Password:</label><br>
-	  <input type="text" id="commpass" name="commpass" value="<c:out value="${committee.commpass}"/>"required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commpass" name="commpass" value="<c:out value="${committee.commpass}"/>"required></center><br>
 	  <label for="commid"></label><br>
-	  <input type="hidden" id="commid" name="commid" value="<c:out value="${committee.commid}"/>"><br>
+	  <input type="hidden" id="commid" name="commid" value="<c:out value="${committee.commid}"/>">
+	  <input class="btn btn-primary" type="submit" value="UPDATE">
 	  <br>
 	  <br>
-	  
-	  <input type="submit" value="UPDATE">
-	  
 	  
 	</form>
+	</main>
 	</div>
 	
 	 

@@ -49,7 +49,7 @@ public class Update_Report_Servlet extends HttpServlet {
 	    reportdao.updatereport(r); 
 	    
 	    request.setAttribute("report", ReportDAO.getreportlist());
-	    RequestDispatcher view = request.getRequestDispatcher("Listreport.jsp");
+	    RequestDispatcher view = request.getRequestDispatcher("successupdatereport.jsp");
 	    view.forward(request, response);
 	  }
 	

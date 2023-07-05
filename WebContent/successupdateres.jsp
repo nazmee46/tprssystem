@@ -7,13 +7,20 @@
 	response.setHeader("Pragma","no-cache");
 	response.setDateHeader ("Expires", 0);
 	
-	if(session.getAttribute("session_commid") == null) {
+	if(session.getAttribute("session_resid") == null) {
 		response.sendRedirect("index.jsp");
 	}
 %>
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,32 +49,26 @@
 			<c:out value="${session_name}"></c:out>
 		</div>
 		<div class="staff-level px-4 fs-6 text-secondary mb-2">
-			<c:out value="${session_commid}"></c:out>
+			<c:out value="${session_resid}"></c:out>
 		</div>
 		<hr>
 		<ul class="mt-4 nav nav-pills flex-column mb-auto">
 			<li>
-				<a href="Committee_Servlet?action=list" class="nav-link active">
-					<img src="assets/icons/file_white.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Committees </label>
-				</a>
-			</li>
-			<li>
-				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+				<a href="Report_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
 			<li>
-				<a href="Resident_Servlet?action=list" class="nav-link link-dark">
+				<a href="Resident_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Resident</label>
+					<label class="link-name">List of Residents</label>
 				</a>
 			</li>
 			<li>
-				<a href="Company_Servlet?action=list" class="nav-link link-dark">
+				<a href="Company_Servlet_res?action=list" class="nav-link link-dark">
 					<img src="assets/icons/file.svg" class="pb-1 px-2">
-					<label class="link-name">Lists of Company</label>
+					<label class="link-name">List of Company</label>
 				</a>
 			</li>
 			<li>
@@ -78,35 +79,16 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Homecommittee.jsp" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<div class="card w-100">
-			<div class="card-header fw-bold">Committee List</div>
-			<div class="card-body">
-				<c:if test="${session_commid==1}"> <button class="btn btn-success" onclick="location.href = 'addcommittee.jsp'">Add Committee</button></c:if>
-				<c:if test="${session_commid==2}"> <button class="btn btn-success" onclick="location.href = 'addcommittee.jsp'">Add Committee</button></c:if>
-				<table id="example" class="display" style="width: 100%">
-					<thead>
-						<tr>
-							<th>ID number</th>
-							<th>Name</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${committee}" var="ci">
-							<tr>
-								<td><c:out value="${ci.commid}"></c:out></td>
-								<td><c:out value="${ci.commname}"></c:out></td>
-									<td><button class="btn btn-primary" onclick="location.href = 'Committee_Servlet?action=view&commid=<c:out value="${ci.commid}" />'" >  View  </button> 
-									<c:if test="${session_commid==ci.commid}">  <button class="btn btn-success" onclick="location.href = 'Update_Committee_Servlet?commid=<c:out value="${ci.commid}" />'" >Update</button>    </c:if> 
-    								<c:if test="${session_commid==1}">  <button class="btn btn-danger" onclick="location.href = 'Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />'" >Delete</button>    </c:if>
-   								  	<c:if test="${session_commid==2}">  <button class="btn btn-danger" onclick="location.href = 'Committee_Servlet?action=delete&commid=<c:out value="${ci.commid}" />'" >Delete</button>    </c:if></td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-				 
-			</div>
+	<div class="card w-100" style="background-color:#d5d9dd;">
+	<section id="hero">
+    <div class="hero container">
+      <div>
+        <h1 style="color:white;">Successfully Updated Account</h1>
+		<button type="button" class="btn btn-success" onclick="location.href = 'Homeresident.jsp'" >  Click here to return to Homepage  </button><br><br>
+      </div>
+    </div>
+    
+  </section>
 		</div>
 	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -125,5 +107,7 @@
 	</div>
 	<script src="assets/js/bootstrap.js"></script>
 	<script src="assets/js/form-validation.js"></script>
+	
 </body>
+
 </html>

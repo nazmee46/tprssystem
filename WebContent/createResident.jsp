@@ -79,26 +79,29 @@
 	</div>
 	<div class="content p-3">
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Resident_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<form action="Resident_Servlet_res" method="post">
-		<label>Create Resident  Account</label><br>
+	<main class="form-signin text-center bg-accent">
+	<form action="Resident_Servlet_res" method="post"><br>
+	<h1 class="h3 fw-normal fw-bold">Create Resident Account Form</h1><br>
 	  <label for="resid">Resident ID:</label><br>
-	  <input type="text" id="resid" name="resid" value="" required><br>
+	  <label><i><font size=2>*House no + First two initial name</font></i></label><br>
+	  <label><i><font size=2>**Example: JA01AH</font></i></label>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resid" name="resid" value="" required></center><br>
 	  <label for="resname">Resident Name:</label><br>
-	  <input type="text" id="resname" name="resname" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resname" name="resname" value="" required></center><br>
 	  <label for="resphoneno">Resident Phone Number:</label><br>
-	  <input type="text" id="resphoneno" name="resphoneno" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resphoneno" name="resphoneno" value="" required></center><br>
 	  <label for="resaddress">Resident Address:</label><br>
-	  <input type="text" id="resaddress" name="resaddress" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="resaddress" name="resaddress" value="" required></center><br>
 	  <label for="respass">Resident Password:</label><br>
-	  <input type="text" id="respass" name="respass" value="" required><br>
+	  <label><i><font size=2>*123 + First two initial name</font></i></label><br>
+	  <label><i><font size=2>**Example: 123AH</font></i></label>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="respass" name="respass" value="" required></center><br>
 	  
+	  <input class="btn btn-primary" type="submit" value="Add Resident">
 	  <br>
 	  <br>
-	  
-	  <input type="submit" value="Add Resident">
-	  
-	  
 	</form>
+	</main>
 	</div>
 	
 	 

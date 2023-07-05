@@ -79,30 +79,31 @@
 	</div>
 	<div class="content p-3">
 	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Committee_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<form action="Committee_Servlet" method="post">
-		<label>Create Committee Account</label><br>
+	<main class="form-signin text-center bg-accent">
+	<form action="Committee_Servlet" method="post" class="m-4"><br>
+	<h1 class="h3 fw-normal fw-bold">Create Committee Account</h1><br>
 	  <label for="commid">Committee ID:</label><br>
-	  <input type="text" id="commid" name="commid" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commid" name="commid" value="" required></center><br>
 	  <label for="commname">Committee Name:</label><br>
-	  <input type="text" id="commname" name="commname" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commname" name="commname" value="" required></center><br>
 	  <label for="commphoneno">Committee Phone Number:</label><br>
-	  <input type="text" id="commphoneno" name="commphoneno" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commphoneno" name="commphoneno" value="" required></center><br>
 	  <label for="commaddress">Committee Address:</label><br>
-	  <input type="text" id="commaddress" name="commaddress" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commaddress" name="commaddress" value="" required></center><br>
 	  <label for="commpass">Committee Password:</label><br>
-	  <input type="text" id="commpass" name="commpass" value="" required><br>
+	  <center><input class="form-control" style="width: 200px;" type="text" id="commpass" name="commpass" value="" required></center><br>
 	  <label for="presidentid">President ID:</label><br>
-	  <select name="presidentid" id="1" value="" class="" required>
+	  <center><select class="form-control" style="width: 200px;" name="presidentid" id="1" value="" class="" required>
 				<option value="">--President ID--</option>
 				<option value="1">1 - Khai</option>
-	  </select><br>
+	  </select></center><br>
+	  
+	  <input class="btn btn-primary" type="submit" value="Add committee">
 	  <br>
 	  <br>
-	  
-	  <input type="submit" value="Add committee">
-	  
 	  
 	</form>
+	</main>
 	</div>
 	
 	 

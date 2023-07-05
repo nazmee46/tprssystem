@@ -76,7 +76,7 @@
 	<div class="card w-100">
 			<div class="card-header fw-bold">Report List</div>
 			<div class="card-body">
-				<button class="btn btn-danger" onclick="location.href = 'addreportres.jsp'">Create Report</button>
+				<button class="btn btn-success" onclick="location.href = 'addreportres.jsp'">Create Report</button>
 				<table id="example" class="display" style="width: 100%">
 					<thead>
 						<tr>
