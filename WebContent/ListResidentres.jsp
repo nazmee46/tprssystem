@@ -91,7 +91,7 @@
 								<td><c:out value="${r.resname}"></c:out></td>
 									<td><button class="btn btn-primary" onclick="location.href = 'Resident_Servlet_res?action=view&resid=<c:out value="${r.resid}" />'">View</button>
 									<c:if test="${session_resid==r.resid}">  <button class="btn btn-success" onclick="location.href = 'Update_Resident_Servlet?resid=<c:out value="${r.resid}" />'" >Update</button>    </c:if> 
-    								<c:if test="${session_resid==r.resid}">  <button class="btn btn-danger" onclick="location.href = 'Resident_Servlet?action=delete&resid=<c:out value="${r.resid}" />'" >Delete</button>    </c:if></td>
+    								<c:if test="${session_resid==r.resid}">  <button class="btn btn-danger" onclick="location.href = 'Resident_Servlet_res?action=delete&resid=<c:out value="${r.resid}" />'" >Delete</button>    </c:if></td>
 							</tr>
 						</c:forEach>
 					</tbody>

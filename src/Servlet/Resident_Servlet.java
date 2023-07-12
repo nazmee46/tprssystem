@@ -45,7 +45,7 @@ public class Resident_Servlet extends HttpServlet {
 
     	    }
     	    if (action.equalsIgnoreCase("delete")) {
-      	      forward = LIST;
+      	      forward = "successDeleteResFromcom.jsp";
       	      resid = request.getParameter("resid");
       	      residentdao.deleteresident(resid);
       	      request.setAttribute("resident", ResidentDAO.getresidentlist());

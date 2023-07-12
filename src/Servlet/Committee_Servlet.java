@@ -47,7 +47,7 @@ public class Committee_Servlet extends HttpServlet {
 
     	    // Complete action for delete 
     	    if (action.equalsIgnoreCase("delete")) {
-    	      forward = LIST;
+    	      forward = "SuccessDeleteComm.jsp";
     	      commid = request.getParameter("commid");
     	      committeedao.deletecommittee(commid);
     	      request.setAttribute("committee", CommitteeDAO.getcommitteelist());

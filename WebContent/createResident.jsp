@@ -89,13 +89,13 @@
 	  <label for="resname">Resident Name:</label><br>
 	  <center><input class="form-control" style="width: 200px;" type="text" id="resname" name="resname" value="" required></center><br>
 	  <label for="resphoneno">Resident Phone Number:</label><br>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="resphoneno" name="resphoneno" value="" required></center><br>
+	  <center><input class="form-control" style="width: 200px;" type="number" id="resphoneno" name="resphoneno" value="" required></center><br>
 	  <label for="resaddress">Resident Address:</label><br>
 	  <center><input class="form-control" style="width: 200px;" type="text" id="resaddress" name="resaddress" value="" required></center><br>
 	  <label for="respass">Resident Password:</label><br>
 	  <label><i><font size=2>*123 + First two initial name</font></i></label><br>
 	  <label><i><font size=2>**Example: 123AH</font></i></label>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="respass" name="respass" value="" required></center><br>
+	  <center><input class="form-control" style="width: 200px;" type="password" id="respass" name="respass" value="" required></center><br>
 	  
 	  <input class="btn btn-primary" type="submit" value="Add Resident">
 	  <br>

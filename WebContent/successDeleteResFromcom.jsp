@@ -13,7 +13,14 @@
 %>
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +43,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color:white;">
 	<div class="sidebar p-3 bg-accent">
 		<div class="staff-name px-4 fs-5 fw-bold">
 			<c:out value="${session_name}"></c:out>
@@ -53,8 +60,8 @@
 				</a>
 			</li>
 			<li>
-				<a href="Report_Servlet?action=list" class="nav-link active">
-					<img src="assets/icons/monitor_white.svg" class="pb-1 px-2">
+				<a href="Report_Servlet?action=list" class="nav-link link-dark">
+					<img src="assets/icons/monitor.svg" class="pb-1 px-2">
 					<label class="link-name">Report</label>
 				</a>
 			</li>
@@ -78,49 +85,21 @@
 		</ul>
 	</div>
 	<div class="content p-3">
-	<a class="btn btn-sm btn-secondary bg-accent-light button3"  href="Report_Servlet?action=list" style="height:40px "><img src="assets/icons/short_left.svg" class="py-1"></a>
-	<main class="form-signin text-center bg-accent">
-	<form action="Report_Servlet" method="post" class="m-4"><br>
-	<h1 class="h3 fw-normal fw-bold">Create Report Form</h1><br>
-	 	<label for="reportid">Report ID:</label><br>
-	  <label><i><font size=2>*YourID_Date_NoOfReportOfTheDay</font></i></label><br>
-	  <label><i><font size=2>**Example: 1_1202_1</font></i></label>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="reportid" name="reportid" value="" required></center><br> 
-	  <label for="reportdesc">Report Description:</label><br>  
-	  <label><i><font size=2>*What happen and where?</font></i></label><br>
-	  <label><i><font size=2>**Example: Lampu rosak di Lorong 17</font></i></label>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="reportdesc" name="reportdesc" value=""required></center><br>
-	  <label for="reporttype">Report Type:</label><br>
-	  <center><select class="form-control" style="width: 200px;"
-				name="reporttype" id="reporttype" class="" required>
-				<option value="">--Report Type--</option>
-				<option value="Civil">Civil</option>
-				<option value="Electrical">Electrical</option>
-				<option value="Safety">Safety</option>
-			</select></center><br>
-	  <label for="reportstatus">Report Status:</label><br>
-	<center><select class="form-control" style="width: 200px;"
-				name="reportstatus" id="reportstatus" class="" required>
-				<option value="">--Report Status--</option>
-				<option value="Report Created">Report Created</option>
-			</select></center><br>
-	  <label for="commid">Committee ID:</label><br>
-	  <label><i><font size=2>*Your ID</font></i></label><br>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="commid" name="commid" value="" required></center><br>
-	  <label for="reportdate">Report Date:</label><br>
-	  <label><i><font size=2>*dd-mm-yyyy</font></i></label><br>
-	  <label><i><font size=2>**Example: 23-04-2023</font></i></label>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="reportdate" name="reportdate" value=""required></center><br>
-	  
-	  <input class="btn btn-primary" type="submit" value="Create Report">
-	  <br>
-	  <br>
-	  
-	</form>
-	</main>
-	</div>
 	
-	 
+	<!-- <button class="btn btn-sm btn-secondary bg-accent-light" style="border: none;"><img src="assets/icons/short_left.svg" class="py-1"></button>-->
+	<div class="card w-100" style="background-color:#d5d9dd;">
+	<section id="hero">
+    <div class="hero container">
+      <div>
+        <h1 style="color:white;">Successfully Deleted Resident Account</h1>
+		<button class="btn btn-success" onclick="location.href = 'Homecommittee.jsp'" >  Click here to return to Homepage  </button><br><br>
+      </div>
+    </div>
+   
+    
+  </section>
+		</div>
+	</div>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">

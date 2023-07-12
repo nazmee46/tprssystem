@@ -87,7 +87,7 @@
 	  <label for="commaddress"> Committee Address:</label><br>
 	  <center><input class="form-control" style="width: 200px;" type="text" id="commaddress" name="commaddress" value="<c:out value="${committee.commaddress}"/>"required></center><br>
 	  <label for="commpass"> Committee Password:</label><br>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="commpass" name="commpass" value="<c:out value="${committee.commpass}"/>"required></center><br>
+	  <center><input class="form-control" style="width: 200px;" type="password" id="commpass" name="commpass" value="<c:out value="${committee.commpass}"/>"required></center><br>
 	  <label for="commid"></label><br>
 	  <input type="hidden" id="commid" name="commid" value="<c:out value="${committee.commid}"/>">
 	  <input class="btn btn-primary" type="submit" value="UPDATE">

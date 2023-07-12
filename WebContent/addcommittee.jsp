@@ -87,11 +87,11 @@
 	  <label for="commname">Committee Name:</label><br>
 	  <center><input class="form-control" style="width: 200px;" type="text" id="commname" name="commname" value="" required></center><br>
 	  <label for="commphoneno">Committee Phone Number:</label><br>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="commphoneno" name="commphoneno" value="" required></center><br>
+	  <center><input class="form-control" style="width: 200px;" type="number" id="commphoneno" name="commphoneno" value="" required></center><br>
 	  <label for="commaddress">Committee Address:</label><br>
 	  <center><input class="form-control" style="width: 200px;" type="text" id="commaddress" name="commaddress" value="" required></center><br>
 	  <label for="commpass">Committee Password:</label><br>
-	  <center><input class="form-control" style="width: 200px;" type="text" id="commpass" name="commpass" value="" required></center><br>
+	  <center><input class="form-control" style="width: 200px;" type="password" id="commpass" name="commpass" value="" required></center><br>
 	  <label for="presidentid">President ID:</label><br>
 	  <center><select class="form-control" style="width: 200px;" name="presidentid" id="1" value="" class="" required>
 				<option value="">--President ID--</option>
